@@ -1,10 +1,10 @@
 import { React } from "react";
-import type { ReactNode, FC } from "react";
+import type { ReactNode } from "react";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 
-type LayoutProps = {children: ReactNode};
+type LayoutProps = { children: ReactNode };
 
 export default function Navbar({ children }: LayoutProps) {
   const { theme, setTheme } = useTheme();
