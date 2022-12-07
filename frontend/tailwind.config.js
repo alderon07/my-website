@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        mono: ['var(--font-robotoMono)', ...fontFamily.mono],
+        mono: ['var(--font-rubik)', ...fontFamily.mono],
       },
     },
   },

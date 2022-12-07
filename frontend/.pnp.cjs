@@ -28,6 +28,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@heroicons/react", "virtual:3fb7c0db9290db65617db1c74e5f4e15640eb8d904232bee3b718d10371e39ea6f698b8d1b076f340e23046027ad8f402fd4bb57bb6b96ed4e60b8a4a7d65683#npm:2.0.13"],\
             ["@next/font", "npm:13.0.5"],\
             ["@types/node", "npm:18.11.9"],\
             ["@types/react", "npm:18.0.25"],\
@@ -90,6 +91,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@gar-promisify-npm-1.1.3-ac1a325862-4059f790e2.zip/node_modules/@gar/promisify/",\
           "packageDependencies": [\
             ["@gar/promisify", "npm:1.1.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@heroicons/react", [\
+        ["npm:2.0.13", {\
+          "packageLocation": "./.yarn/cache/@heroicons-react-npm-2.0.13-35b19f9179-f03c393a12.zip/node_modules/@heroicons/react/",\
+          "packageDependencies": [\
+            ["@heroicons/react", "npm:2.0.13"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:3fb7c0db9290db65617db1c74e5f4e15640eb8d904232bee3b718d10371e39ea6f698b8d1b076f340e23046027ad8f402fd4bb57bb6b96ed4e60b8a4a7d65683#npm:2.0.13", {\
+          "packageLocation": "./.yarn/__virtual__/@heroicons-react-virtual-ca40b50e4c/0/cache/@heroicons-react-npm-2.0.13-35b19f9179-f03c393a12.zip/node_modules/@heroicons/react/",\
+          "packageDependencies": [\
+            ["@heroicons/react", "virtual:3fb7c0db9290db65617db1c74e5f4e15640eb8d904232bee3b718d10371e39ea6f698b8d1b076f340e23046027ad8f402fd4bb57bb6b96ed4e60b8a4a7d65683#npm:2.0.13"],\
+            ["@types/react", "npm:18.0.25"],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3703,6 +3726,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["resume-site", "workspace:."],\
+            ["@heroicons/react", "virtual:3fb7c0db9290db65617db1c74e5f4e15640eb8d904232bee3b718d10371e39ea6f698b8d1b076f340e23046027ad8f402fd4bb57bb6b96ed4e60b8a4a7d65683#npm:2.0.13"],\
             ["@next/font", "npm:13.0.5"],\
             ["@types/node", "npm:18.11.9"],\
             ["@types/react", "npm:18.0.25"],\

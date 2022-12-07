@@ -1,8 +1,9 @@
-import { React } from "react";
+import React from "react";
 import type { ReactNode } from "react";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import Link from "next/link";
+import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 
 type LayoutProps = { children: ReactNode };
 
@@ -13,58 +14,66 @@ export default function Navbar({ children }: LayoutProps) {
 
   return (
     <div>
-      <nav className="flex justify-between self-center text-md lowercase h-24 px-4 rounded container">
-        <span className="self-center">
-          <Link href="/">icon</Link>
+      <nav className="flex justify-between items-center text-md lowercase h-24 rounded container">
+        <span>
+          <Link href="/">NAQI</Link>
         </span>
-        <ul className="flex justify-center items-center list-none gap-4">
-          {/* <li className={`${style} hover:scale-105`}>
-          <a href="">About</a>
-        </li> */}
-          <li className={`${style} hover:scale-105`}>
-            <Link href="/projects">Projects</Link>
-          </li>
-          <li className={`${style} hover:scale-110`}>
-            <button
-              onClick={() => {
-                const mode = theme === "light" ? "dark" : "light";
-                setTheme(mode);
-              }}
-            >
-              <span className="hidden dark:inline">
+        <span>
+          <ul className="flex list-none gap-4 items-center">
+            <li className={`${style} hover:scale-105`}>
+              <Link href="/projects">Projects</Link>
+            </li>
+            {/*TODO: Make this into a component */}
+            <li id="github" className={`${style} hover:scale-110`}>
+              <Link href="https://github.com/alderon07" target="_blank">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="w-4 h-4 stroke-2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
-                  />
-                </svg>
-              </span>
-              <span className="dark:hidden">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
+                  role="img"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  class="w-4 h-4 stroke-2"
+                  className="w-4 h-4 stroke-current stoke-2"
                 >
-                  <path
-                    fill-rule="evenodd"
-                    d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
-                    clip-rule="evenodd"
-                  />
+                  <title>Github</title>
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                 </svg>
-              </span>
-            </button>
-          </li>
-        </ul>
+              </Link>
+            </li>
+            <li id='instagram' className={`${style} hover:scale-110`}>
+              <Link href="https://www.instagram.com/sadasspanda" target="_blank">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="h-4 w-4 stroke-current stroke-2"
+                >
+                  <title>Instagram</title>
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </Link>
+            </li>
+            <li className={`${style} hover:scale-110 place-content-center`}>
+              <button
+                className="pt-1" 
+                onClick={() => {
+                  const mode = theme === "light" ? "dark" : "light";
+                  setTheme(mode);
+                }}
+              >
+                <span className="hidden dark:inline">
+                  <SunIcon className="h-4 w-4 stroke-current" />
+                </span>
+                <span className="dark:hidden">
+                  <MoonIcon className="h-4 w-4 stroke-current" />
+                </span>
+              </button>
+            </li>
+          </ul>
+        </span>
       </nav>
+
       {children}
     </div>
   );
