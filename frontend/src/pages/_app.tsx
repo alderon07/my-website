@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider attribute="class">
       <main className={`${rubik.variable} font-rubik`}>
-        <div className={`px-4 container h-screen mx-auto font-light font-mono bg-slate-100 text-stone-700 dark:bg-slate-900 dark:text-slate-300`}>
+        <div className={`px-8 container h-screen mx-auto font-normal font-mono bg-slate-100 text-stone-700 dark:bg-slate-900 dark:text-stone-300`}>
           <Navbar>
             <Component {...pageProps} />
           </Navbar>
