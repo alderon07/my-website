@@ -5,7 +5,7 @@ export default function About() {
     <div className="flex justify-center items-center md:min-h-screen">
 
       <section className="flex flex-col grow md:py-16 md:mx-40 gap-8">
-        <h2 className="text-5xl self-center md:text-6xl lg:text-7xl">About</h2>
+        <h2 className="text-4xl self-center md:text-5xl lg:text-6xl">About</h2>
 
         <div className="flex flex-col gap-8 justify-center items-center">
           <div className="bg-gradient-to-br from-yellow-900 to-amber-300 dark:bg-gradient-to-br dark:from-blue-900 dark:to-indigo-200 rounded-3xl md:rounded-full max-w-lg max-h-lg">
