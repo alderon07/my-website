@@ -7,17 +7,16 @@ import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 
 type LayoutProps = { children: ReactNode };
 
-export default function Navbar({ children }: LayoutProps) {
+export default function Navbar() {
   const { theme, setTheme } = useTheme();
 
-  const style =
-    "ease-in-out delay-100 duration-300 hover:text-amber-500 dark:hover:text-sky-300 transition-all";
+  const style ="ease-in-out delay-100 duration-300 hover:text-amber-500 dark:hover:text-sky-300 transition-all";
 
   return (
     <div>
-      <nav className="flex justify-between items-center text-lg lowercase h-24 rounded container">
+      <nav className="flex justify-between items-center text-lg lowercase h-20 rounded">
         <span>
-          <Link href="/">NAQI</Link>
+          <Link href="/">naqi</Link>
         </span>
         <span>
           <ul className="flex list-none gap-4 items-center">
@@ -47,7 +46,6 @@ export default function Navbar({ children }: LayoutProps) {
         </span>
       </nav>
 
-      {children}
     </div>
   );
 }
