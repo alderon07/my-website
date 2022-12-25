@@ -9,22 +9,23 @@ export default function Work() {
           My Experience.
         </h2>
 
-        <div className="flex flex-col p-8 rounded-xl justify-start shadow-xl shadow-indigo-900/50">
+        <div className="flex flex-col p-4 md:p-16 rounded-xl justify-start shadow-xl shadow-indigo-900/50">
           <h5 className="text-xl">
             Software Engineer
             <span className="text-sky-300">
               &nbsp; @ &nbsp;
-              <a
+              <Link
                 class="group text-sky-300 transition-all duration-100 ease-in-out visited:text-pink-300"
-                href="#"
+                href="https://www.haleymarketing.com"
+                target="_blank"
               >
                 <span class="bg-left-bottom bg-gradient-to-r from-amber-300 via-red-500 to-indigo-600 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
                   Haley Marketing
                 </span>
-              </a>
+              </Link>
             </span>
           </h5>
-          <ul className="list-disc list-inside">
+          <ul className="text-rust font-medium list-disc list-inside">
             <li>blah</li>
             <li>do</li>
             <li>no</li>

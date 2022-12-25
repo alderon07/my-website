@@ -17,7 +17,7 @@ export default function About() {
           </div>
 
           <div>
-            <p className="text-justify md:text-lg max-w-xl">
+            <p className="text-justify lg:text-lg max-w-lg">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ipsum
               dolor sit amet consectetur adipiscing elit. Iaculis nunc sed augue

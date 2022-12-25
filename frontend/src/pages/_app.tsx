@@ -1,8 +1,8 @@
-import "../../styles/globals.css";
 import React from "react";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "next-themes";
 import { Rubik } from "@next/font/google";
+import "../../styles/globals.css";
 
 const rubik = Rubik({
   variable: "--font-rubik",

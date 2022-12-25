@@ -2,6 +2,7 @@ import React from "react";
 import type { ReactNode } from "react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
+import Image from "next/image";
 import Socials from "../socials/Socials";
 import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 
@@ -18,7 +19,11 @@ export default function Navbar() {
       <nav className="flex justify-between items-center text-lg lowercase h-20 rounded">
         <span>
           <Link href="/">
-            <img className={`w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 ${style} hover:scale-105`} src="logo.svg" alt="logo" />
+            <img
+              className={`w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 ${style} hover:scale-105`}
+              src="logo.svg"
+              alt="logo"
+            />
           </Link>
         </span>
         <span>
