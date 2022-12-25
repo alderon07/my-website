@@ -10,6 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'rust': '#aba293',
+      },
       fontFamily: {
         mono: ['var(--font-rubik)', ...fontFamily.mono],
       },
