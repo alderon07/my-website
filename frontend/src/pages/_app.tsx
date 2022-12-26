@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider attribute="class">
       <main className={`${rubik.variable} font-rubik`}>
-              <Component className="scollbar" {...pageProps} />
+        <Component className="scollbar" {...pageProps} />
       </main>
     </ThemeProvider>
   );

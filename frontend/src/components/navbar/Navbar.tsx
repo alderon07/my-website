@@ -16,19 +16,19 @@ export default function Navbar() {
 
   return (
     <div>
-      <nav className="flex justify-between items-center text-lg lowercase h-20 rounded">
+      <nav className="flex h-20 items-center justify-between rounded text-lg lowercase">
         <span>
           <Link href="/">
             <img
-              className={`w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 ${style} hover:scale-105`}
+              className={`h-12 w-12 md:h-16 md:w-16 lg:h-20 lg:w-20 ${style} hover:scale-105`}
               src="logo.svg"
               alt="logo"
             />
           </Link>
         </span>
         <span>
-          <ul className="flex list-none gap-4 items-center">
-            <li className={`${style} hover:scale-105 hidden`}>
+          <ul className="flex list-none items-center gap-4">
+            <li className={`${style} hidden hover:scale-105`}>
               <Link href="/projects">Projects</Link>
             </li>
 

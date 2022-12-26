@@ -3,14 +3,14 @@ import Link from "next/link";
 
 export default function Work() {
   return (
-    <div className="flex justify-center items-center md:min-h-screen">
-      <section className="flex flex-col grow md:py-16 md:mx-40 gap-8 justify-center items-center">
-        <h2 className="text-4xl self-center md:text-5xl lg:text-6xl">
-          My Experience.
+    <div className="mb-4 flex items-center justify-center md:min-h-screen">
+      <section className="flex grow flex-col items-center justify-center gap-4 md:mx-40 md:py-16 lg:gap-8">
+        <h2 className="self-center text-3xl lg:text-4xl xl:text-5xl">
+          My Experience
         </h2>
 
-        <div className="flex flex-col p-4 md:p-16 rounded-xl justify-start shadow-xl shadow-indigo-900/50">
-          <h5 className="text-xl">
+        <div className="flex flex-col rounded-xl transition lg:p-8 lg:shadow-xl lg:hover:shadow-indigo-900/25">
+          <h5 className="lg:text-xl">
             Software Engineer
             <span className="text-sky-300">
               &nbsp; @ &nbsp;
@@ -19,13 +19,13 @@ export default function Work() {
                 href="https://www.haleymarketing.com"
                 target="_blank"
               >
-                <span class="bg-left-bottom bg-gradient-to-r from-amber-300 via-red-500 to-indigo-600 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                <span class="bg-gradient-to-r from-amber-300 via-red-500 to-indigo-600 bg-[length:0%_2px] bg-left-bottom bg-no-repeat transition-all duration-500 ease-out group-hover:bg-[length:100%_2px] lg:text-xl">
                   Haley Marketing
                 </span>
               </Link>
             </span>
           </h5>
-          <ul className="text-rust font-medium list-disc list-inside">
+          <ul className="list-inside list-disc self-start font-medium text-rust marker:text-sky-300">
             <li>blah</li>
             <li>do</li>
             <li>no</li>

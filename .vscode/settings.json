@@ -1,8 +1,5 @@
 {
   "files.autoSave": "afterDelay",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "eslint.nodePath": "frontend/.yarn/sdks",
   "typescript.tsdk": "frontend/.yarn/sdks/typescript/lib",
-  "eslint.packageManager": "yarn",
-  "npm.packageManager": "yarn",
 }
