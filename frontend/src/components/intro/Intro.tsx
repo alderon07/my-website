@@ -20,7 +20,7 @@ export default function Intro() {
           </div>
           <div>
             <p className="max-w-lg text-teal-800 dark:text-rose-300 text-justify lg:text-lg">
-              I'm a Software Engineer who loves making web apps.
+              I am a Software Engineer who loves making web apps.
             </p>
           </div>
         </div>
