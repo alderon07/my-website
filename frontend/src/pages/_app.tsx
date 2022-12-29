@@ -1,19 +1,25 @@
 import React from "react";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "next-themes";
-import { Rubik } from "@next/font/google";
+import { Rubik, Nabla } from "@next/font/google";
 import "../styles/globals.css";
 
 const rubik = Rubik({
-  variable: "--font-rubik",
+  variable: "--rubik-font",
   subsets: ["latin"],
+});
+
+const nabla = Nabla({
+  variable: "--nabla-font",
 });
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider attribute="class">
-      <main className={`${rubik.variable} font-rubik`}>
-        <Component className="scollbar" {...pageProps} />
+      <main
+        className={`${rubik.variable} ${nabla.variable} font-nabla font-rubik`}
+      >
+        <Component {...pageProps} />
       </main>
     </ThemeProvider>
   );

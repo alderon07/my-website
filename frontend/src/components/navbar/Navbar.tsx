@@ -12,7 +12,7 @@ export default function Navbar() {
   const { theme, setTheme } = useTheme();
 
   const style =
-    "ease-in-out delay-100 duration-300 hover:text-teal-600/75 dark:hover:text-rose-300 transition-all";
+    "ease-in-out delay-100 duration-300 hover:text-emerald-700 dark:hover:text-rose-300 transition-all";
 
   return (
     <div>

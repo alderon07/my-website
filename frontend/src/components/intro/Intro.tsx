@@ -19,7 +19,7 @@ export default function Intro() {
             </h2>
           </div>
           <div>
-            <p className="max-w-lg text-teal-800 dark:text-rose-300 text-justify lg:text-lg">
+            <p className="max-w-lg dark:text-rose-300 text-justify lg:text-lg">
               I am a Software Engineer who loves making web apps.
             </p>
           </div>

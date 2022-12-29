@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-const { fontFamily } = require('tailwindcss/defaultTheme');
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
 module.exports = {
   darkMode: "class",
@@ -11,12 +11,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'rust': '#aba293',
+        rust: "#aba293",
       },
       fontFamily: {
-        mono: ['var(--font-rubik)', ...fontFamily.mono],
+        mono: ["var(--rubik-font)", ...fontFamily.mono],
+        nabla: ["var(--nabla-font)", ...fontFamily.mono],
       },
     },
   },
   plugins: [],
-}
+};
