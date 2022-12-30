@@ -10,12 +10,12 @@ export default function Work() {
         </div>
 
         <div className="flex flex-col gap-2 md:justify-center md:items-center rounded-xl transition lg:p-8 lg:shadow-xl lg:hover:shadow-indigo-400/50 max-w-2xl">
-          <h5 className="flex justify-items-center text-lg dark:text-rose-300 lg:text-2xl">
+          <h5 className="flex justify-items-center dark:text-rose-300 lg:text-2xl">
             Software Engineer
             <span className="text-green-900 dark:text-sky-300">
               &nbsp; <span className="font-bold">@</span> &nbsp;
               <Link
-                class="group font-medium dark:text-sky-300 transition-all duration-100 ease-in-out visited:text-amber-500 dark:visited:text-indigo-300"
+                className="group font-medium dark:text-sky-300 transition-all duration-100 ease-in-out visited:text-amber-500 dark:visited:text-indigo-300"
                 href="https://www.haleymarketing.com"
                 target="_blank"
               >
