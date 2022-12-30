@@ -10,7 +10,7 @@ export default function About() {
         <div className="flex flex-col items-center justify-center gap-8">
           <div className="max-h-sm max-w-sm rounded-3xl bg-gradient-to-bl  from-teal-900 via-yellow-600 to-green-800 dark:bg-gradient-to-br dark:from-blue-900 dark:to-indigo-200 md:rounded-full">
             <Image
-              className="rounded-3xl object-cover mix-blend-overlay hover:mix-blend-normal md:rounded-full"
+              className="rounded-3xl object-cover mix-blend-overlay md:rounded-full"
               src="/me.jpg"
               alt="Naqi"
               quality={100}
@@ -21,12 +21,12 @@ export default function About() {
           </div>
 
           <div className="flex flex-col transition justify-center items-center rounded-xl gap-4 lg:p-8 lg:shadow-lg lg:hover:shadow-rose-500 dark:lg:hover:shadow-indigo-400/50 ">
-            <p className="max-w-lg text-justify lg:text-lg xl:text-xl">
+            <p className="max-w-lg text-justify  dark:text-rose-300 lg:text-lg xl:text-xl">
               Some of the things I love are videos games, making pixel art, and
               the general comfort of my living room.
             </p>
-            <div>
-              <h6 className="lg:text-base xl:text-lg">
+            <div className="xl:text-lg">
+              <h6 className="xl:text-xl">
                 Technologies I have worked with:
               </h6>
               <ul className="flex marker:text-emerald-700 dark:marker:text-rose-300 list-disc list-inside">
