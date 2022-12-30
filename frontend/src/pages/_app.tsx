@@ -11,6 +11,7 @@ const rubik = Rubik({
 
 const nabla = Nabla({
   variable: "--nabla-font",
+  subsets: ["latin"],
 });
 
 export default function App({ Component, pageProps }: AppProps) {
