@@ -9,8 +9,8 @@ export default function Work() {
           <h2 className="text-3xl lg:text-4xl xl:text-6xl">My Experience</h2>
         </div>
 
-        <div className="flex flex-col gap-2 md:justify-center md:items-center rounded-xl transition lg:p-8 lg:shadow-xl lg:hover:shadow-indigo-400/50 max-w-2xl">
-          <h5 className="flex justify-items-center dark:text-rose-300 lg:text-2xl">
+        <div className="flex flex-col gap-2 md:justify-center md:items-center rounded-xl transition lg:p-8 lg:shadow-xl lg:hover:shadow-emerald-900/50 dark:lg:hover:shadow-indigo-400/50 max-w-2xl">
+          <h5 className="flex justify-items-center dark:text-rose-300 lg:text-2xl md:text-xl">
             Software Engineer
             <span className="text-green-900 dark:text-sky-300">
               &nbsp; <span className="font-bold">@</span> &nbsp;

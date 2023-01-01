@@ -20,7 +20,7 @@ export default function About() {
             ></Image>
           </div>
 
-          <div className="flex flex-col transition justify-center items-center rounded-xl gap-4 lg:p-8 lg:shadow-lg lg:hover:shadow-rose-500 dark:lg:hover:shadow-indigo-400/50 ">
+          <div className="flex flex-col transition justify-center items-center rounded-xl gap-4 lg:p-8 lg:shadow-lg lg:hover:shadow-emerald-900/50 dark:lg:hover:shadow-indigo-400/50 ">
             <p className="max-w-lg text-justify  dark:text-rose-300 lg:text-lg xl:text-xl">
               Some of the things I love are videos games, making pixel art, and
               the general comfort of my living room.
