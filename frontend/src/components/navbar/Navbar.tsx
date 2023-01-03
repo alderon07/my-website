@@ -6,7 +6,7 @@ import Image from "next/image";
 import Socials from "../socials/Socials";
 import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 
-type LayoutProps = { children: ReactNode };
+// type LayoutProps = { children: ReactNode };
 
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
@@ -19,11 +19,14 @@ export default function Navbar() {
       <nav className="flex h-20 items-center justify-between rounded text-lg lowercase">
         <span>
           <Link href="/">
-            <img
-              className={`h-12 w-12 md:h-16 md:w-16 lg:h-20 lg:w-20 ${style} hover:scale-105`}
+            <Image
+              className={`h-12 w-12 md:h-16 md:w-16 ${style} hover:scale-105`}
+              width={50}
+              height={50}
               src="logo.svg"
               alt="logo"
-            />
+            >
+            </Image>
           </Link>
         </span>
         <span>
