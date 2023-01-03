@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider attribute="class">
       <main
-        className={`${rubik.variable} ${nabla.variable} font-nabla font-rubik`}
+        className={`${rubik.variable} ${nabla.variable} font-rubik`}
       >
         <Component {...pageProps} />
       </main>

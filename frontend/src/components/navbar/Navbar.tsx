@@ -1,5 +1,5 @@
 import React from "react";
-import type { ReactNode } from "react";
+// import type { ReactNode } from "react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import Image from "next/image";
@@ -16,8 +16,8 @@ export default function Navbar() {
 
   return (
     <div>
-      <nav className="flex h-20 items-center justify-between rounded text-lg lowercase">
-        <span>
+      <nav className="flex h-20 items-center justify-between text-lg lowercase">
+        <div>
           <Link href="/">
             <Image
               className={`h-12 w-12 md:h-16 md:w-16 ${style} hover:scale-105`}
@@ -28,8 +28,8 @@ export default function Navbar() {
             >
             </Image>
           </Link>
-        </span>
-        <span>
+        </div>
+        <div>
           <ul className="flex list-none items-center gap-4">
             <li className={`${style} hidden hover:scale-105`}>
               <Link href="/projects">Projects</Link>
@@ -54,7 +54,7 @@ export default function Navbar() {
               </button>
             </li>
           </ul>
-        </span>
+        </div>
       </nav>
     </div>
   );
