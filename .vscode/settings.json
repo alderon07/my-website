@@ -1,5 +1,0 @@
-{
-  "files.autoSave": "afterDelay",
-  "typescript.enablePromptUseWorkspaceTsdk": true,
-  "typescript.tsdk": "frontend/.yarn/sdks/typescript/lib",
-}
