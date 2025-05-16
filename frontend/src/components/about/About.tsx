@@ -21,9 +21,9 @@ export default function About() {
               ></Image>
             </div>
             <p className="max-w-lg text-justify lg:text-lg xl:text-xl">
-              Hey, I'm Naqi 👋 — a software developer who finds joy in both clean code and chaotic team fights on Summoner’s Rift 🎮. <br/> <br/>
-              By day, I build full-stack applications with modern tools like TypeScript, Go, and Next.js. By night, I'm jamming on my 🎸 guitar, belting out karaoke 🎤 hits, or diving into the world of 📸 photography. <br/> <br/>
-              When I’m not coding or taking photos, I’m probably geeking out over 🍿 pop culture, catching up on the latest 🎥 anime, or getting lost in 📕 manga.
+              Hey, I&apos;m Naqi 👋 — a software developer who finds joy in both clean code and chaotic team fights on Summoner&apos;s Rift 🎮. <br/><br/>
+              By day, I build full-stack applications with modern tools like TypeScript, Go, and Next.js. By night, I&apos;m jamming on my 🎸 guitar, belting out karaoke 🎤 hits, or diving into the world of 📸 photography. <br/><br/>
+              When I&apos;m not coding or taking photos, I&apos;m probably geeking out over 🍿 pop culture, catching up on the latest 🎥 anime, or getting lost in 📕 manga.
             </p>
           </div>
         </div>

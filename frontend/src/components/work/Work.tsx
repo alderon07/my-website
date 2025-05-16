@@ -5,7 +5,7 @@ export default function Work() {
   return (
     <div className="mb-4 flex items-center justify-center md:min-h-screen lg:w-full">
       <section className="flex flex-col grow gap-4 justify-center items-center md:mx-40 md:py-16 lg:gap-4">
-        <div className="flex flex-col gap-4 md:justify-center items-center rounded-3xl transition lg:pt-8 lg:pb-16 lg:px-16 lg:shadow-2xl lg:w-2/3 lg:hover:shadow-emerald-900/50 dark:lg:hover:shadow-indigo-400/50 ">
+        <div className="flex flex-col gap-4 md:justify-center items-center rounded-3xl transition lg:pt-8 lg:pb-16 lg:px-32 lg:shadow-2xl lg:w-2/3 lg:hover:shadow-emerald-900/50 dark:lg:hover:shadow-indigo-400/50 ">
           <h2 className="self-center py-2 text-3xl lg:text-4xl xl:text-6xl dark:text-rose-300">
             My Experience
           </h2>
@@ -26,7 +26,7 @@ export default function Work() {
             </span>
           </h5>
 
-          <ul className="flex flex-col pl-4 gap-4 xl:text-lg list-outside list-disc marker:text-emerald-700 dark:marker:text-rose-300">
+          <ul className="flex flex-col pl-4 gap-4 lg:text-lg xl:text-xl list-outside list-disc marker:text-emerald-700 dark:marker:text-rose-300">
             <li>Engineered backend integrations for ATS platforms and third-party services (e.g., Indeed, ZipRecruiter, Bullhorn), supporting 20+ systems, 1M+ job listings and candidates.</li>
             <li>Leveraged Cursor to automate and scale ATS integration development, reducing manual effort and improving turnaround time.</li>
             <li>Improved CI/CD deployment speed by 40% by replacing Docker-based Bitbucket runners with lightweight Linux shell runners, resulting in faster commit-to-deploy cycles and a smoother developer experience.</li>
