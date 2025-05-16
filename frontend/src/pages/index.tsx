@@ -17,6 +17,6 @@ export default function Home() {
       <About></About>
       <Work></Work>
       <Footer></Footer>
-    </div>
+    </div> 
   );
 }

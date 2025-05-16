@@ -20,7 +20,7 @@ export default function Socials({ style }: Style) {
           </svg>
         </Link>
       </li>
-      <li id="instagram" className={`${style} hover:scale-110`}>
+      {/* <li id="instagram" className={`${style} hover:scale-110`}>
         <Link href="https://www.instagram.com/sadasspanda" target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +35,7 @@ export default function Socials({ style }: Style) {
             <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
           </svg>
         </Link>
-      </li>
+      </li> */}
     </>
   );
 }
