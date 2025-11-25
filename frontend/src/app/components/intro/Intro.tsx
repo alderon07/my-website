@@ -15,7 +15,7 @@ export default function Intro() {
               Naqi Haider.
             </h1>
             <h2 className="text-3xl lg:text-4xl xl:text-6xl animate-slide-up">
-              I build stupid things.
+              I build dope things.
             </h2>
           </div>
         </div>
