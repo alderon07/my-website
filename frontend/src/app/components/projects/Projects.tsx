@@ -22,7 +22,7 @@ export default function Projects() {
 
   // Priority repos to display first
   const priorityRepos = useMemo(
-    () => ["my-website", "cocktail-app", "liquor-looker", "godoit", "kv"],
+    () => ["my-website", "link-it", "godoit", "kv", "cocktail-app"],
     []
   );
 

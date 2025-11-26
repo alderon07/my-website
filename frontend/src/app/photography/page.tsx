@@ -2,8 +2,6 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 import Navbar from "../components/navbar/Navbar";
 
 interface Photo {
