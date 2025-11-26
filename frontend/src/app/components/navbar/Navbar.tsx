@@ -28,7 +28,14 @@ export default function Navbar() {
           </Link>
         </div>
         <div>
-          <ul className="flex list-none items-center gap-4">
+          <ul className="flex list-none items-center gap-2 md:gap-4">
+            <li className={`${style} hidden sm:block`}>
+              <Link href="/photography">photography</Link>
+            </li>
+            <li className={`${style} sm:hidden`}>
+              <Link href="/photography">photos</Link>
+            </li>
+            
             <Socials style={style} />
 
             <li className={`${style} hover:scale-110`}>
