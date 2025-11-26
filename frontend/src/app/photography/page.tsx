@@ -100,7 +100,7 @@ export default function PhotographyPage() {
           Photography
         </h1>
         <p className="text-lg text-stone-700 dark:text-slate-400 max-w-2xl mx-auto">
-          A collection of moments captured through my lens.
+          Some of my favorite photos.
         </p>
       </div>
 
