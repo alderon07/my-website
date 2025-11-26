@@ -29,7 +29,6 @@ export default function PhotographyPage() {
       alt: "Photography by Naqi Haider",
       title: "DSCF3789",
     },
-,
     {
       id: 3,
       src: "/photography/DSCF1596.jpg",
