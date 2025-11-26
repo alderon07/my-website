@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
+import Navbar from "../components/navbar/Navbar";
 
 interface Photo {
   id: number;
@@ -15,78 +16,74 @@ interface Photo {
 export default function PhotographyPage() {
   const [selectedPhoto, setSelectedPhoto] = useState<Photo | null>(null);
 
-  // TODO: Replace these with your actual photos
   const photos: Photo[] = [
     {
       id: 1,
-      src: "/photography/photo1.jpg",
-      alt: "Photography sample 1",
-      title: "Sample Photo 1",
+      src: "/photography/DSCF0161.jpg",
+      alt: "Photography by Naqi Haider",
+      title: "DSCF3789",
     },
     {
       id: 2,
-      src: "/photography/photo2.jpg",
-      alt: "Photography sample 2",
-      title: "Sample Photo 2",
+      src: "/photography/DSCF0516.jpg",
+      alt: "Photography by Naqi Haider",
+      title: "DSCF0516",
     },
     {
       id: 3,
-      src: "/photography/photo3.jpg",
-      alt: "Photography sample 3",
-      title: "Sample Photo 3",
+      src: "/photography/DSCF1596.jpg",
+      alt: "Photography by Naqi Haider",
+      title: "DSCF1596",
     },
     {
       id: 4,
-      src: "/photography/photo4.jpg",
-      alt: "Photography sample 4",
-      title: "Sample Photo 4",
+      src: "/photography/DSCF3789.jpg",
+      alt: "Photography by Naqi Haider",
+      title: "DSCF0161",
     },
     {
       id: 5,
-      src: "/photography/photo5.jpg",
-      alt: "Photography sample 5",
-      title: "Sample Photo 5",
+      src: "/photography/DSCF3969.jpg",
+      alt: "Photography by Naqi Haider",
+      title: "DSCF3969",
     },
     {
       id: 6,
-      src: "/photography/photo6.jpg",
-      alt: "Photography sample 6",
-      title: "Sample Photo 6",
+      src: "/photography/DSCF4719.jpg",
+      alt: "Photography by Naqi Haider",
+      title: "DSCF4719",
     },
     {
       id: 7,
-      src: "/photography/photo7.jpg",
-      alt: "Photography sample 7",
-      title: "Sample Photo 7",
+      src: "/photography/DSCF4764.jpg",
+      alt: "Photography by Naqi Haider",
+      title: "DSCF4764",
     },
     {
       id: 8,
-      src: "/photography/photo8.jpg",
-      alt: "Photography sample 8",
-      title: "Sample Photo 8",
+      src: "/photography/DSCF4803.jpg",
+      alt: "Photography by Naqi Haider",
+      title: "DSCF4803",
     },
     {
       id: 9,
-      src: "/photography/photo9.jpg",
-      alt: "Photography sample 9",
-      title: "Sample Photo 9",
+      src: "/photography/DSCF5028.jpg",
+      alt: "Photography by Naqi Haider",
+      title: "DSCF5028",
+    },
+    {
+      id: 10,
+      src: "/photography/IMG_0041.jpg",
+      alt: "Photography by Naqi Haider",
+      title: "IMG_0041",
     },
   ];
 
   return (
-    <div className="min-h-screen py-8 px-4 md:px-8">
-      {/* Back button */}
-      <div className="mb-8">
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 text-emerald-700 dark:text-rose-400 hover:text-emerald-900 dark:hover:text-rose-300 transition-colors"
-        >
-          <ArrowLeftIcon className="h-5 w-5" />
-          <span className="text-lg">Back to Home</span>
-        </Link>
-      </div>
-
-      {/* Header */}
+    <>
+      <Navbar />
+      <div className="min-h-screen py-8 px-4 md:px-8">
+        {/* Header */}
       <div className="mb-12 text-center animate-fade-in">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-4 pb-6 bg-gradient-to-r from-emerald-700 via-teal-600 to-amber-700 dark:from-rose-400 dark:via-pink-400 dark:to-indigo-400 bg-clip-text text-transparent">
           Photography
@@ -154,7 +151,8 @@ export default function PhotographyPage() {
           )}
         </div>
       )}
-    </div>
+      </div>
+    </>
   );
 }
 
