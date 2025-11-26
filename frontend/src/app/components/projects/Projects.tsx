@@ -83,7 +83,7 @@ export default function Projects() {
   return (
     <div className="flex items-center justify-center md:min-h-screen py-16" id="projects">
       <section className="flex grow flex-col gap-8 md:mx-40">
-        <div className="flex flex-col items-center justify-center gap-8">
+        <div className="flex flex-col items-center justify-center gap-8 p-8 md:p-12 rounded-3xl transition lg:shadow-2xl lg:hover:shadow-emerald-900/50 dark:lg:hover:shadow-indigo-400/50 hover:scale-[1.02] duration-300 w-full">
           <h2 className="text-3xl lg:text-4xl xl:text-6xl bg-gradient-to-r from-emerald-700 via-teal-600 to-amber-700 dark:from-rose-400 dark:via-pink-400 dark:to-indigo-400 bg-clip-text text-transparent font-semibold">
             Projects
           </h2>
