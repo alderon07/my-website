@@ -18,17 +18,18 @@ export default function PhotographyPage() {
 
   const photos: Photo[] = [
     {
-      id: 1,
-      src: "/photography/DSCF0161.jpg",
-      alt: "Photography by Naqi Haider",
-      title: "DSCF3789",
-    },
-    {
       id: 2,
       src: "/photography/DSCF0516.jpg",
       alt: "Photography by Naqi Haider",
       title: "DSCF0516",
     },
+    {
+      id: 1,
+      src: "/photography/DSCF3789.jpg",
+      alt: "Photography by Naqi Haider",
+      title: "DSCF3789",
+    },
+,
     {
       id: 3,
       src: "/photography/DSCF1596.jpg",
@@ -37,15 +38,9 @@ export default function PhotographyPage() {
     },
     {
       id: 4,
-      src: "/photography/DSCF3789.jpg",
+      src: "/photography/DSCF0161.jpg",
       alt: "Photography by Naqi Haider",
       title: "DSCF0161",
-    },
-    {
-      id: 5,
-      src: "/photography/DSCF3969.jpg",
-      alt: "Photography by Naqi Haider",
-      title: "DSCF3969",
     },
     {
       id: 6,
@@ -53,6 +48,13 @@ export default function PhotographyPage() {
       alt: "Photography by Naqi Haider",
       title: "DSCF4719",
     },
+    {
+      id: 5,
+      src: "/photography/DSCF3969.jpg",
+      alt: "Photography by Naqi Haider",
+      title: "DSCF3969",
+    },
+
     {
       id: 7,
       src: "/photography/DSCF4764.jpg",
@@ -72,10 +74,22 @@ export default function PhotographyPage() {
       title: "DSCF5028",
     },
     {
+      id: 11,
+      src: "/photography/DSCF0537.jpg",
+      alt: "Photography by Naqi Haider",
+      title: "DSCF0537",
+    },
+    {
       id: 10,
       src: "/photography/IMG_0041.jpg",
       alt: "Photography by Naqi Haider",
-      title: "IMG_0041",
+      title: "Sasha",
+    },
+    {
+      id: 12,
+      src: "/photography/DSCF4807.jpg",
+      alt: "Photography by Naqi Haider",
+      title: "DSCF4807",
     },
   ];
 
