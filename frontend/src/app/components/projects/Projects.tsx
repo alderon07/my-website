@@ -29,10 +29,30 @@ export default function Projects() {
   useEffect(() => {
     async function fetchRepos() {
       try {
-        // Fetch all repos first
+        // Fetch all repos with optional GitHub token for higher rate limits
+        const headers: HeadersInit = {
+          'Accept': 'application/vnd.github.v3+json',
+        };
+        
+        // Add auth token if available (optional - increases rate limit)
+        const token = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
+        if (token) {
+          headers['Authorization'] = `Bearer ${token}`;
+        }
+        
         const response = await fetch(
-          "https://api.github.com/users/alderon07/repos?sort=updated&per_page=100"
+          "https://api.github.com/users/alderon07/repos?sort=updated&per_page=100",
+          { 
+            headers,
+            // Cache for 1 hour to reduce API calls
+            next: { revalidate: 3600 }
+          }
         );
+        
+        if (!response.ok) {
+          throw new Error(`GitHub API error: ${response.status}`);
+        }
+        
         const data: Repository[] = await response.json();
 
         // Filter to only show pinned repos (based on your priority list)
@@ -49,7 +69,8 @@ export default function Projects() {
 
         setRepos(sorted);
       } catch (error) {
-        console.error("Error fetching repos:", error);
+        // Log error securely without exposing sensitive info
+        console.error("Error fetching repos:", error instanceof Error ? error.message : "Unknown error");
       } finally {
         setLoading(false);
       }

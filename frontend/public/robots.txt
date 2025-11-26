@@ -1,0 +1,12 @@
+# robots.txt for naqihaider.vercel.app
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://naqihaider.vercel.app/sitemap.xml
+
+# Disallow admin or private paths if any
+# Disallow: /admin/
+# Disallow: /private/
+
