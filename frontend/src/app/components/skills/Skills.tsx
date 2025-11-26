@@ -103,7 +103,7 @@ export default function Skills() {
     {
       name: "Jira",
       category: "Tools & Cloud",
-      iconUrl: "https://cdn.worldvectorlogo.com/logos/jira-1.svg",
+      iconUrl: "/jira.svg",
     },
     {
       name: "Cursor",
