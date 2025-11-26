@@ -10,9 +10,9 @@ export default function About() {
             <h2 className="self-center py-2 text-3xl lg:text-4xl xl:text-6xl bg-gradient-to-r from-emerald-700 via-teal-600 to-amber-700 dark:from-rose-400 dark:via-pink-400 dark:to-indigo-400 bg-clip-text text-transparent font-semibold w-full text-center">
               About
             </h2>
-            <div className="w-full max-w-sm rounded-3xl bg-gradient-to-bl from-teal-900 via-yellow-600 to-green-800 dark:bg-gradient-to-br dark:from-blue-900 dark:to-indigo-200 md:rounded-full animate-gradient bg-[length:200%_200%] p-1">
+            <div className="w-full max-w-sm rounded-3xl bg-gradient-to-bl from-teal-900 via-yellow-600 to-green-800 dark:bg-gradient-to-br dark:from-blue-900 dark:to-indigo-200 animate-gradient bg-[length:200%_200%] p-1">
               <Image
-                className="rounded-3xl object-cover mix-blend-overlay md:rounded-full w-full h-auto"
+                className="rounded-3xl object-cover mix-blend-overlay w-full h-auto"
                 src="/me.jpg"
                 alt="Naqi"
                 quality={100}
