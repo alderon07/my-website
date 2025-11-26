@@ -5,7 +5,7 @@ import { useTheme } from "next-themes";
 import Link from "next/link";
 import Image from "next/image";
 import Socials from "../socials/Socials";
-import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
+import { MoonIcon, SunIcon, CameraIcon } from "@heroicons/react/24/solid";
 
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
@@ -29,11 +29,11 @@ export default function Navbar() {
         </div>
         <div>
           <ul className="flex list-none items-center gap-2 md:gap-4">
-            <li className={`${style} hidden sm:block`}>
-              <Link href="/photography">photography</Link>
-            </li>
-            <li className={`${style} sm:hidden`}>
-              <Link href="/photography">photos</Link>
+            <li className={`${style} hover:scale-110`}>
+              <Link href="/photography" className="flex items-center gap-1.5">
+                <CameraIcon className="h-5 w-5" />
+                <span className="hidden md:inline">photography</span>
+              </Link>
             </li>
             
             <Socials style={style} />
