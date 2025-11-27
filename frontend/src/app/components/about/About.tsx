@@ -16,7 +16,7 @@ export default function About() {
             <div className="w-full max-w-sm rounded-3xl bg-gradient-to-bl from-teal-900 via-yellow-600 to-green-800 dark:bg-gradient-to-br dark:from-blue-900 dark:to-indigo-200 animate-gradient bg-[length:200%_200%] p-1">
               <Image
                 className="rounded-3xl object-cover mix-blend-overlay w-full h-auto"
-                src="/me.jpg"
+                src="/me-square.jpg"
                 alt="Naqi"
                 quality={100}
                 width={400}

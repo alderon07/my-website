@@ -40,6 +40,6 @@ TypeScript • Go • Next.js • React
 
 ## Temporary Solution
 Until you create a custom OG image, you can:
-1. Use your profile photo (`/me.jpg`) - already in your public folder
+1. Use your profile photo (`/me-square.jpg`) - already in your public folder
 2. Create a simple one at https://ogimage.gallery/
 

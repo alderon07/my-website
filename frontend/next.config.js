@@ -62,7 +62,7 @@ const nextConfig = {
   // Image optimization - security & performance
   images: {
     formats: ['image/avif', 'image/webp'],
-    qualities: [75, 100], // Add quality 100 for /me.jpg
+    qualities: [75, 100], // Add quality 100 for /me-square.jpg
     remotePatterns: [
       {
         protocol: 'https',

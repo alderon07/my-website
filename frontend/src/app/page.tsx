@@ -14,7 +14,7 @@ export default function Home() {
     "@type": "Person",
     name: "Naqi Haider",
     url: "https://naqihaider.vercel.app",
-    image: "https://naqihaider.vercel.app/me.jpg",
+    image: "https://naqihaider.vercel.app/me-square.jpg",
     jobTitle: "Remote Software Developer",
     worksFor: {
       "@type": "Organization",
