@@ -26,6 +26,15 @@ export default function Projects() {
     []
   );
 
+  // Custom tech stack for each project (supplements GitHub topics)
+  const projectTechStack: { [key: string]: string[] } = {
+    "my-website": ["React", "TypeScript", "Next.js", "Tailwind-CSS"],
+    "link-it": ["TypeScript", "Next.js", "Tailwind-CSS", "React"],
+    godoit: ["Go"],
+    kv: ["Go"],
+    "cocktail-app": ["React", "TypeScript", "Tailwind-CSS"],
+  };
+
   useEffect(() => {
     async function fetchRepos() {
       try {
@@ -185,25 +194,39 @@ export default function Projects() {
                   {repo.description || "No description available"}
                 </p>
 
-                <div className="flex flex-wrap gap-2">
-                  {repo.language && (
-                    <span className="flex items-center gap-1.5 text-xs px-2 py-1 rounded-full bg-amber-900/10 dark:bg-slate-700/50">
-                      <span
-                        className={`w-2 h-2 rounded-full ${getLanguageColor(
-                          repo.language
-                        )}`}
-                      />
-                      {repo.language}
-                    </span>
+                {/* Tech Stack Section */}
+                <div className="space-y-2">
+                  {projectTechStack[repo.name] && (
+                    <div className="flex flex-col gap-2">
+                      <span className="text-xs font-semibold text-stone-600 dark:text-slate-400 uppercase tracking-wide">
+                        Tech Stack
+                      </span>
+                      <div className="flex flex-wrap gap-2">
+                        {projectTechStack[repo.name].map((tech) => (
+                          <span
+                            key={tech}
+                            className="text-xs px-2.5 py-1 rounded-full bg-gradient-to-r from-emerald-500/10 to-teal-500/10 dark:from-rose-500/10 dark:to-indigo-500/10 text-emerald-700 dark:text-indigo-300 border border-emerald-500/20 dark:border-indigo-500/20 font-medium"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   )}
-                  {repo.topics.slice(0, 3).map((topic) => (
-                    <span
-                      key={topic}
-                      className="text-xs px-2 py-1 rounded-full bg-emerald-900/10 dark:bg-indigo-900/30 text-emerald-800 dark:text-indigo-300"
-                    >
-                      {topic}
-                    </span>
-                  ))}
+
+                  {/* GitHub Topics (only show if no custom tech stack) */}
+                  {!projectTechStack[repo.name] && repo.topics.length > 0 && (
+                    <div className="flex flex-wrap gap-2">
+                      {repo.topics.slice(0, 3).map((topic) => (
+                        <span
+                          key={topic}
+                          className="text-xs px-2 py-1 rounded-full bg-stone-900/5 dark:bg-slate-700/30 text-stone-600 dark:text-slate-400"
+                        >
+                          {topic}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
 
                 <div className="flex gap-3 mt-2">
