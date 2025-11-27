@@ -19,9 +19,9 @@ export default function Navbar() {
         <div>
           <Link href="/">
             <Image
-              className={`h-12 w-12 md:h-16 md:w-16 ${style} hover:scale-105`}
-              width={50}
-              height={50}
+              className={`h-14 w-14 md:h-16 md:w-16 ${style} hover:scale-105`}
+              width={56}
+              height={56}
               src="/logo.svg"
               alt="logo"
             />
