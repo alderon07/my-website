@@ -25,17 +25,19 @@ export default function About() {
             </div>
             <p className="w-full max-w-lg text-justify lg:text-lg xl:text-xl px-4 md:px-0">
               Hey, I&apos;m Naqi 👋 — a software developer who finds joy in both
-              clean code and chaotic team fights on Summoner&apos;s Rift 🎮.{" "}
+              clean code and chaotic team fights on Summoner&apos;s Rift 🎮. Yes, I am a League of Legends player. Addicted since 2012.{" "}
               <br />
               <br />
               By day, I build full-stack applications with modern tools like
               TypeScript, Go, and Next.js. By night, I&apos;m jamming on my 🎸
-              guitar, belting out karaoke 🎤 hits, or diving into the world of
-              📸 photography. <br />
+              guitar, belting out karaoke hits, or using my camera to take 
+              photos of things I find interesting. 📸
+              <br />
               <br />
               When I&apos;m not coding or taking photos, I&apos;m probably
-              geeking out over 🍿 pop culture, catching up on the latest 🎥
-              anime, or getting lost in 📕 manga.
+              geeking out over pop culture, catching up on the latest 🎥
+              anime, or 📕 manga.
+              <br />
             </p>
           </div>
         </div>
