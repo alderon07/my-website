@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 
 export default function Work() {
@@ -11,15 +10,15 @@ export default function Work() {
         className="flex flex-col grow gap-4 justify-center items-center md:mx-40 md:py-16 lg:gap-4"
         aria-labelledby="experience-heading"
       >
-        <div className="flex flex-col gap-4 md:justify-center items-center rounded-3xl transition lg:pt-8 lg:pb-16 lg:px-32 lg:shadow-2xl lg:w-2/3 lg:hover:shadow-emerald-900/50 dark:lg:hover:shadow-indigo-400/50 hover:scale-[1.02] duration-300">
+        <div className="flex flex-col gap-6 items-center rounded-3xl transition px-8 py-10 md:px-12 md:py-12 lg:px-16 lg:py-14 xl:px-20 xl:py-16 lg:shadow-2xl lg:w-2/3 lg:hover:shadow-emerald-900/50 dark:lg:hover:shadow-indigo-400/50 hover:scale-[1.02] duration-300">
           <h2
             id="experience-heading"
-            className="self-center py-2 text-3xl lg:text-4xl xl:text-6xl bg-gradient-to-r from-emerald-700 via-teal-600 to-amber-700 dark:from-rose-400 dark:via-pink-400 dark:to-indigo-400 bg-clip-text text-transparent font-semibold"
+            className="self-center text-3xl lg:text-4xl xl:text-6xl bg-gradient-to-r from-emerald-700 via-teal-600 to-amber-700 dark:from-rose-400 dark:via-pink-400 dark:to-indigo-400 bg-clip-text text-transparent font-semibold"
           >
             My Experience
           </h2>
 
-          <h3 className="flex justify-items-center lg:text-2xl md:text-xl">
+          <h3 className="flex justify-items-center lg:text-2xl md:text-xl text-center">
             <span className="text-green-900 dark:text-indigo-300">
               Software Engineer
             </span>
@@ -39,7 +38,7 @@ export default function Work() {
             </span>
           </h3>
 
-          <ul className="flex flex-col pl-4 gap-4 lg:text-lg xl:text-xl list-outside list-disc marker:text-emerald-700 dark:marker:text-rose-300">
+          <ul className="flex flex-col px-4 md:px-6 lg:px-8 gap-4 lg:text-lg xl:text-xl list-outside list-disc marker:text-emerald-700 dark:marker:text-rose-300 w-full max-w-3xl">
             <li className="animate-slide-up" style={{ animationDelay: "0.1s" }}>
               Engineered backend integrations for ATS platforms and third-party
               services (e.g., Indeed, ZipRecruiter, Bullhorn), supporting 20+

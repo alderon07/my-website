@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 
 export default function Intro() {
@@ -8,7 +7,7 @@ export default function Intro() {
         className="flex grow flex-col items-center justify-center md:mx-48 md:py-16 animate-fade-in"
         aria-labelledby="intro-heading"
       >
-        <div className="flex flex-col justify-center items-center gap-8 p-12 md:p-16 lg:p-18 xl:py-32 rounded-3xl transition lg:shadow-2xl lg:hover:shadow-emerald-900/50 dark:lg:hover:shadow-indigo-400/50 hover:scale-[1.02] duration-300 w-full">
+        <div className="flex flex-col justify-center items-center gap-8 px-12 py-8 md:px-16 md:py-10 lg:px-20 lg:py-12 xl:px-24 xl:py-16 rounded-3xl transition lg:shadow-2xl lg:hover:shadow-emerald-900/50 dark:lg:hover:shadow-indigo-400/50 hover:scale-[1.02] duration-300 w-4/5">
           {/* Text Content */}
           <div className="flex flex-col gap-2 xl:items-center xl:text-center">
             <p className="text-lg font-medium lg:text-xl xl:text-2xl animate-slide-up">
