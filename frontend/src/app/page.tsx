@@ -15,7 +15,7 @@ export default function Home() {
     name: "Naqi Haider",
     url: "https://naqihaider.vercel.app",
     image: "https://naqihaider.vercel.app/me.jpg",
-    jobTitle: "Software Developer",
+    jobTitle: "Remote Software Developer",
     worksFor: {
       "@type": "Organization",
       name: "Haley Marketing",
@@ -52,8 +52,9 @@ export default function Home() {
       "Linux",
       "C",
     ],
+    areaServed: ["Remote", "United States", "North Carolina", "New York", "Seattle"],
     description:
-      "Software developer specializing in full-stack applications with TypeScript, Go, Next.js, and React.",
+      "Remote software developer specializing in full-stack applications with TypeScript, Go, Next.js, and React.",
   };
 
   return (

@@ -3,7 +3,10 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="flex items-center justify-center md:min-h-screen w-full" id="about">
+    <div
+      className="flex items-center justify-center md:min-h-screen w-full"
+      id="about"
+    >
       <section className="flex grow flex-col gap-4 md:mx-40 md:py-16 lg:gap-8 w-full">
         <div className="flex flex-col items-center justify-center gap-8 w-full px-4 md:px-0">
           <div className="flex flex-col transition justify-center items-center rounded-3xl gap-4 w-full lg:pb-16 lg:pt-8 lg:px-8 lg:w-2/3 lg:shadow-2xl lg:hover:shadow-emerald-900/50 dark:lg:hover:shadow-indigo-400/50 hover:scale-[1.02] duration-300">
@@ -27,12 +30,12 @@ export default function About() {
               <br />
               By day, I build full-stack applications with modern tools like
               TypeScript, Go, and Next.js. By night, I&apos;m jamming on my 🎸
-              guitar, belting out karaoke 🎤 hits, or diving into the world of 📸
-              photography. <br />
+              guitar, belting out karaoke 🎤 hits, or diving into the world of
+              📸 photography. <br />
               <br />
-              When I&apos;m not coding or taking photos, I&apos;m probably geeking out
-              over 🍿 pop culture, catching up on the latest 🎥 anime, or getting
-              lost in 📕 manga.
+              When I&apos;m not coding or taking photos, I&apos;m probably
+              geeking out over 🍿 pop culture, catching up on the latest 🎥
+              anime, or getting lost in 📕 manga.
             </p>
           </div>
         </div>
@@ -40,4 +43,3 @@ export default function About() {
     </div>
   );
 }
-

@@ -17,30 +17,43 @@ const nabla = Nabla({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://naqihaider.vercel.app'),
+  metadataBase: new URL("https://naqihaider.vercel.app"),
   title: {
-    default: "Naqi Haider - Software Developer & Photographer",
-    template: "%s | Naqi Haider"
+    default: "Naqi Haider - Remote Software Developer & Photographer",
+    template: "%s | Naqi Haider",
   },
-  description: "Software developer specializing in full-stack applications with TypeScript, Go, Next.js, and React. Building modern web experiences with a passion for clean code and photography.",
+  description:
+    "Remote software developer specializing in full-stack applications with TypeScript, Go, Next.js, and React. Building modern web experiences with a passion for clean code and photography.",
   keywords: [
     "Naqi Haider",
     "Software Developer",
     "Full Stack Developer",
+    "Remote Software Developer",
+    "Software Developer NC",
+    "Software Developer New York",
+    "Software Developer Seattle",
     "TypeScript",
     "JavaScript",
     "Go",
     "Golang",
     "Next.js",
     "React",
+    "Perl",
+    "MySQL",
+    "jQuery",
+    "Tailwind CSS",
+    "HTML5",
+    "CSS3",
+    "Python",
+    "Linux",
+    "C",
     "Node.js",
     "PostgreSQL",
     "MongoDB",
     "Web Development",
-    "Frontend Developer",
     "Backend Developer",
     "Portfolio",
-    "Photographer"
+    "Photographer",
   ],
   authors: [{ name: "Naqi Haider", url: "https://naqihaider.vercel.app" }],
   creator: "Naqi Haider",
@@ -55,21 +68,23 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://naqihaider.vercel.app",
     siteName: "Naqi Haider Portfolio",
-    title: "Naqi Haider - Software Developer & Photographer",
-    description: "Software developer specializing in full-stack applications with TypeScript, Go, Next.js, and React. Building modern web experiences with a passion for clean code and photography.",
+    title: "Naqi Haider - Remote Software Developer & Photographer",
+    description:
+      "Remote software developer specializing in full-stack applications with TypeScript, Go, Next.js, and React. Building modern web experiences with a passion for clean code and photography.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Naqi Haider - Software Developer",
-      }
+      },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Naqi Haider - Software Developer & Photographer",
-    description: "Software developer specializing in full-stack applications with TypeScript, Go, Next.js, and React.",
+    title: "Naqi Haider - Remote Software Developer & Photographer",
+    description:
+      "Remote software developer specializing in full-stack applications with TypeScript, Go, Next.js, and React.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -78,9 +93,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   verification: {
@@ -112,4 +127,3 @@ export default function RootLayout({
     </html>
   );
 }
-
