@@ -19,7 +19,8 @@ export default function About() {
             >
               About
             </h2>
-            <div className="w-full max-w-sm rounded-3xl bg-gradient-to-bl from-teal-900 via-yellow-600 to-green-800 dark:bg-gradient-to-br dark:from-blue-900 dark:to-indigo-200 animate-gradient bg-[length:200%_200%] p-1">
+            {/* Profile Picture - Only visible on mobile (below lg) */}
+            <div className="lg:hidden w-full max-w-sm rounded-3xl bg-gradient-to-bl from-teal-900 via-yellow-600 to-green-800 dark:bg-gradient-to-br dark:from-blue-900 dark:to-indigo-200 animate-gradient bg-[length:200%_200%] p-1">
               <Image
                 className="rounded-3xl object-cover mix-blend-overlay w-full h-auto"
                 src="/me-square.jpg"
@@ -27,7 +28,6 @@ export default function About() {
                 quality={100}
                 width={400}
                 height={400}
-                preload={true}
               />
             </div>
             <p className="w-full max-w-lg text-justify lg:text-lg xl:text-xl px-4 md:px-0">

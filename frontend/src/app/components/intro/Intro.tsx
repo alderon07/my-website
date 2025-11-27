@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export default function Intro() {
   return (
@@ -7,7 +8,8 @@ export default function Intro() {
         className="flex grow flex-col items-center justify-center md:mx-48 md:py-16 animate-fade-in"
         aria-labelledby="intro-heading"
       >
-        <div className="flex flex-col justify-center items-center gap-6 p-12 md:p-16 lg:p-20 xl:py-32 rounded-3xl transition lg:shadow-2xl lg:hover:shadow-emerald-900/50 dark:lg:hover:shadow-indigo-400/50 hover:scale-[1.02] duration-300 w-full lg:w-2/3">
+        <div className="flex flex-col justify-center items-center gap-8 p-12 md:p-16 lg:p-18 xl:py-32 rounded-3xl transition lg:shadow-2xl lg:hover:shadow-emerald-900/50 dark:lg:hover:shadow-indigo-400/50 hover:scale-[1.02] duration-300 w-full">
+          {/* Text Content */}
           <div className="flex flex-col gap-2 xl:items-center xl:text-center">
             <p className="text-lg font-medium lg:text-xl xl:text-2xl animate-slide-up">
               Hello, my name is
@@ -18,6 +20,20 @@ export default function Intro() {
             >
               Naqi Haider.
             </h1>
+            {/* Profile Picture - Only visible on desktop (lg and above) */}
+            <div className="hidden lg:block w-full max-w-md lg:max-w-lg xl:max-w-xl py-4 justify-center items-center">
+              <div className="w-2/3 mx-auto rounded-3xl bg-gradient-to-bl from-teal-900 via-yellow-600 to-green-800 dark:bg-gradient-to-br dark:from-blue-900 dark:to-indigo-200 animate-gradient bg-[length:200%_200%] p-1">
+                <Image
+                  className="rounded-3xl object-cover mix-blend-overlay w-full h-auto mx-auto"
+                  src="/me-square.jpg"
+                  alt="Portrait of Naqi Haider, software developer"
+                  quality={100}
+                  width={300}
+                  height={300}
+                  preload={true}
+                />
+              </div>
+            </div>
             <p className="text-3xl lg:text-4xl xl:text-6xl animate-slide-up">
               I build dope things.
             </p>
