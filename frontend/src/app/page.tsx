@@ -18,11 +18,11 @@ export default function Home() {
     jobTitle: "Software Developer",
     worksFor: {
       "@type": "Organization",
-      name: "Self-Employed"
+      name: "Haley Marketing",
     },
     sameAs: [
       "https://github.com/alderon07",
-      "https://www.linkedin.com/in/naqi-haider7/"
+      "https://www.linkedin.com/in/naqi-haider7/",
     ],
     knowsAbout: [
       "TypeScript",
@@ -33,10 +33,27 @@ export default function Home() {
       "Node.js",
       "PostgreSQL",
       "MongoDB",
+      "Docker",
+      "Perl",
+      "GCP",
+      "Jira",
+      "Git",
+      "GitHub",
+      "CI/CD",
       "Full Stack Development",
-      "Web Development"
+      "Backend Development",
+      "Web Development",
+      "MySQL",
+      "jQuery",
+      "Tailwind CSS",
+      "HTML5",
+      "CSS3",
+      "Python",
+      "Linux",
+      "C",
     ],
-    description: "Software developer specializing in full-stack applications with TypeScript, Go, Next.js, and React."
+    description:
+      "Software developer specializing in full-stack applications with TypeScript, Go, Next.js, and React.",
   };
 
   return (
@@ -46,7 +63,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      
+
       <div className="flex flex-col gap-4 font-mono">
         <Navbar />
         <Intro />
@@ -59,4 +76,3 @@ export default function Home() {
     </>
   );
 }
-
