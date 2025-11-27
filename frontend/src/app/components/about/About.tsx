@@ -27,6 +27,7 @@ export default function About() {
                 quality={100}
                 width={400}
                 height={400}
+                preload={true}
               />
             </div>
             <p className="w-full max-w-lg text-justify lg:text-lg xl:text-xl px-4 md:px-0">
