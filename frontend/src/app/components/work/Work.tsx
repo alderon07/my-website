@@ -3,14 +3,23 @@ import Link from "next/link";
 
 export default function Work() {
   return (
-    <div className="mb-4 flex items-center justify-center md:min-h-screen lg:w-full" id="experience">
-      <section className="flex flex-col grow gap-4 justify-center items-center md:mx-40 md:py-16 lg:gap-4">
+    <div
+      className="mb-4 flex items-center justify-center md:min-h-screen lg:w-full"
+      id="experience"
+    >
+      <section
+        className="flex flex-col grow gap-4 justify-center items-center md:mx-40 md:py-16 lg:gap-4"
+        aria-labelledby="experience-heading"
+      >
         <div className="flex flex-col gap-4 md:justify-center items-center rounded-3xl transition lg:pt-8 lg:pb-16 lg:px-32 lg:shadow-2xl lg:w-2/3 lg:hover:shadow-emerald-900/50 dark:lg:hover:shadow-indigo-400/50 hover:scale-[1.02] duration-300">
-          <h2 className="self-center py-2 text-3xl lg:text-4xl xl:text-6xl bg-gradient-to-r from-emerald-700 via-teal-600 to-amber-700 dark:from-rose-400 dark:via-pink-400 dark:to-indigo-400 bg-clip-text text-transparent font-semibold">
+          <h2
+            id="experience-heading"
+            className="self-center py-2 text-3xl lg:text-4xl xl:text-6xl bg-gradient-to-r from-emerald-700 via-teal-600 to-amber-700 dark:from-rose-400 dark:via-pink-400 dark:to-indigo-400 bg-clip-text text-transparent font-semibold"
+          >
             My Experience
           </h2>
 
-          <h5 className="flex justify-items-center lg:text-2xl md:text-xl">
+          <h3 className="flex justify-items-center lg:text-2xl md:text-xl">
             <span className="text-green-900 dark:text-indigo-300">
               Software Engineer
             </span>
@@ -20,13 +29,15 @@ export default function Work() {
                 className="group font-medium dark:text-sky-300 transition-all duration-100 ease-in-out visited:text-amber-500 dark:visited:text-indigo-300"
                 href="https://www.haleymarketing.com"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Haley Marketing (opens in new tab)"
               >
                 <span className="bg-gradient-to-r from-teal-600 via-red-500 to-indigo-600 dark:from-amber-300 dark:via-red-500 dark:to-indigo-600 bg-[length:0%_2px] bg-left-bottom bg-no-repeat transition-all duration-500 ease-out group-hover:bg-[length:100%_2px]">
                   Haley Marketing
                 </span>
               </Link>
             </span>
-          </h5>
+          </h3>
 
           <ul className="flex flex-col pl-4 gap-4 lg:text-lg xl:text-xl list-outside list-disc marker:text-emerald-700 dark:marker:text-rose-300">
             <li className="animate-slide-up" style={{ animationDelay: "0.1s" }}>
@@ -70,4 +81,3 @@ export default function Work() {
     </div>
   );
 }
-

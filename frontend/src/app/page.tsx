@@ -52,7 +52,13 @@ export default function Home() {
       "Linux",
       "C",
     ],
-    areaServed: ["Remote", "United States", "North Carolina", "New York", "Seattle"],
+    areaServed: [
+      "Remote",
+      "United States",
+      "North Carolina",
+      "New York",
+      "Seattle",
+    ],
     description:
       "Remote software developer specializing in full-stack applications with TypeScript, Go, Next.js, and React.",
   };
@@ -67,11 +73,13 @@ export default function Home() {
 
       <div className="flex flex-col gap-4 font-mono">
         <Navbar />
-        <Intro />
-        <About />
-        <Skills />
-        <Work />
-        <Projects />
+        <main id="main-content">
+          <Intro />
+          <About />
+          <Skills />
+          <Work />
+          <Projects />
+        </main>
         <Footer />
       </div>
     </>

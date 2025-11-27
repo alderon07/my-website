@@ -15,27 +15,34 @@ export default function Navbar() {
 
   return (
     <div className="sticky top-0 z-50 backdrop-blur-md bg-amber-800/10 dark:bg-slate-900/80 -mx-8 px-8 border-b border-amber-900/20 dark:border-slate-700/50">
-      <nav className="flex h-20 items-center justify-between text-lg lowercase">
+      <nav
+        className="flex h-20 items-center justify-between text-lg lowercase"
+        aria-label="Main navigation"
+      >
         <div>
-          <Link href="/">
+          <Link href="/" aria-label="Home">
             <Image
-              className={`h-14 w-14 md:h-16 md:w-16 ${style} hover:scale-105`}
+              className={`h-14 w-14 md:h-16 md:w-16 ${style} hover:scale-110`}
               width={56}
               height={56}
               src="/logo.svg"
-              alt="logo"
+              alt="Naqi Haider logo"
             />
           </Link>
         </div>
         <div>
           <ul className="flex list-none items-center gap-2 md:gap-4">
             <li className={`${style} hover:scale-110`}>
-              <Link href="/photography" className="flex items-center gap-1.5">
-                <CameraIcon className="h-5 w-5" />
+              <Link
+                href="/photography"
+                className="flex items-center gap-1.5"
+                aria-label="View photography portfolio"
+              >
+                <CameraIcon className="h-5 w-5" aria-hidden="true" />
                 <span className="hidden md:inline">photography</span>
               </Link>
             </li>
-            
+
             <Socials style={style} />
 
             <li className={`${style} hover:scale-110`}>
@@ -45,12 +52,24 @@ export default function Navbar() {
                   const mode = theme === "light" ? "dark" : "light";
                   setTheme(mode);
                 }}
+                aria-label={
+                  theme === "light"
+                    ? "Switch to dark mode"
+                    : "Switch to light mode"
+                }
+                aria-live="polite"
               >
                 <span className="hidden dark:inline">
-                  <SunIcon className="h-5 w-5 stroke-current" />
+                  <SunIcon
+                    className="h-5 w-5 stroke-current"
+                    aria-hidden="true"
+                  />
                 </span>
                 <span className="dark:hidden">
-                  <MoonIcon className="h-5 w-5 stroke-current" />
+                  <MoonIcon
+                    className="h-5 w-5 stroke-current"
+                    aria-hidden="true"
+                  />
                 </span>
               </button>
             </li>
@@ -60,4 +79,3 @@ export default function Navbar() {
     </div>
   );
 }
-
