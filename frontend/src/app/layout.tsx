@@ -19,7 +19,7 @@ const nabla = Nabla({
 export const metadata: Metadata = {
   metadataBase: new URL("https://naqihaider.vercel.app"),
   title: {
-    default: "Naqi Haider - Remote Software Developer & Photographer",
+    default: "Naqi Haider – Remote Software Developer & Photographer",
     template: "%s | Naqi Haider",
   },
   description:
@@ -63,12 +63,19 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/logo.svg", type: "image/svg+xml" },
+    ],
+    apple: [{ url: "/favicon.ico", sizes: "180x180" }],
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://naqihaider.vercel.app",
     siteName: "Naqi Haider Portfolio",
-    title: "Naqi Haider - Remote Software Developer & Photographer",
+    title: "Naqi Haider – Remote Software Developer & Photographer",
     description:
       "Remote software developer specializing in full-stack applications with TypeScript, Go, Next.js, and React. Building modern web experiences with a passion for clean code and photography.",
     images: [
@@ -82,7 +89,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Naqi Haider - Remote Software Developer & Photographer",
+    title: "Naqi Haider – Remote Software Developer & Photographer",
     description:
       "Remote software developer specializing in full-stack applications with TypeScript, Go, Next.js, and React.",
     images: ["/og-image.jpg"],
@@ -115,7 +122,6 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="manifest" href="/manifest.json" />
-        <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#059669" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
