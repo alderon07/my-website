@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Footer() {
   return (
     <div className="flex font-nabla justify-center items-center py-4">
