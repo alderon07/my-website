@@ -65,8 +65,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
+      // Preferred PNG favicon
       { url: "/logo-bg-2.png", sizes: "32x32", type: "image/png" },
       { url: "/logo-bg-2.png", sizes: "16x16", type: "image/png" },
+      // Fallback ICO favicon for older browsers
+      { url: "/favicon.ico", rel: "icon", sizes: "any" as any },
     ],
     apple: [{ url: "/logo-bg-2.png", sizes: "180x180", type: "image/png" }],
   },
