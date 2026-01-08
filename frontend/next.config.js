@@ -46,7 +46,7 @@ const nextConfig = {
               "font-src 'self' https://fonts.gstatic.com data:",
               "img-src 'self' data: https: blob:",
               "connect-src 'self' https://api.github.com https://raw.githubusercontent.com https://www.anthropic.com",
-              "frame-src 'self'",
+              "frame-src 'self' https://open.spotify.com",
               "object-src 'none'",
               "base-uri 'self'",
               "form-action 'self'",

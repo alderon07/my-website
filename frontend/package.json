@@ -11,6 +11,7 @@
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@types/node": "^20.19.25",
+    "canvas-confetti": "^1.9.4",
     "eslint": "^9.39.1",
     "eslint-config-next": "^16.0.5",
     "http-cache-semantics": "^4.2.0",
