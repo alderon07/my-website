@@ -25,7 +25,7 @@ Use tools like:
 
 ### Quick Example Content:
 ```
-Naqi Haider
+Naqi
 Software Developer & Photographer
 
 TypeScript • Go • Next.js • React

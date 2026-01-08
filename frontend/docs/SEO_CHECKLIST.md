@@ -52,22 +52,22 @@
 - [ ] See `OG_IMAGE_GUIDE.md` for instructions
 
 ### 2. Update URL After Domain Purchase
-When you buy `naqihaider.com`, update these files:
+When you buy `yourdomain.com`, update these files:
 - [ ] `src/app/layout.tsx` - line 20: `metadataBase`
 - [ ] `src/app/sitemap.ts` - line 4: `baseUrl`
 - [ ] `public/robots.txt` - line 6: Sitemap URL
 - [ ] `src/app/page.tsx` - line 12: JSON-LD url
 
 **Quick find & replace:**
-- Find: `https://naqihaider.vercel.app`
-- Replace: `https://naqihaider.com`
+- Find: `https://your-site.vercel.app`
+- Replace: `https://yourdomain.com`
 
 ### 3. Submit to Search Engines
 After deployment:
 - [ ] **Google Search Console**: https://search.google.com/search-console
   - Add property
   - Verify ownership
-  - Submit sitemap: `https://naqihaider.com/sitemap.xml`
+  - Submit sitemap: `https://yourdomain.com/sitemap.xml`
   - Get verification code and add to `layout.tsx` line 69
   
 - [ ] **Bing Webmaster Tools**: https://www.bing.com/webmasters
@@ -141,9 +141,9 @@ With this SEO implementation, you should see:
 
 After deploying, test these URLs:
 ```
-https://naqihaider.com/robots.txt
-https://naqihaider.com/sitemap.xml
-https://naqihaider.com/manifest.json
+https://yourdomain.com/robots.txt
+https://yourdomain.com/sitemap.xml
+https://yourdomain.com/manifest.json
 ```
 
 All should return valid responses!

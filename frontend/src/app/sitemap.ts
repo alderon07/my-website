@@ -1,8 +1,9 @@
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from "next";
+import { getSiteUrl } from "./site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://naqihaider.vercel.app'
-  
+  const baseUrl = getSiteUrl();
+
   return [
     {
       url: baseUrl,
@@ -22,6 +23,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.8,
     },
-  ]
+  ];
 }
 

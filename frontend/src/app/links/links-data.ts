@@ -35,18 +35,22 @@ export const linksProfile: LinksProfile = {
   name: "naqi",
   subtitle: "software developer & photographer",
   avatarSrc: "/me-square.jpg",
-  avatarAlt: "naqi haider",
+  avatarAlt: "naqi",
   quickLinks: [
-    {
-      key: "email",
-      label: "email",
-      href: "mailto:naqi.haider@gmail.com",
-      icon: MailIcon,
-      ariaLabel: "Email Naqi",
-      buttonClassName:
-        "bg-emerald-500/18 ring-1 ring-emerald-400/25 text-emerald-200 hover:bg-emerald-500/26 hover:ring-emerald-300/35",
-      iconClassName: "text-emerald-200",
-    },
+    ...(process.env.NEXT_PUBLIC_CONTACT_EMAIL
+      ? [
+          {
+            key: "email",
+            label: "email",
+            href: `mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL}`,
+            icon: MailIcon,
+            ariaLabel: "Email Naqi",
+            buttonClassName:
+              "bg-emerald-500/18 ring-1 ring-emerald-400/25 text-emerald-200 hover:bg-emerald-500/26 hover:ring-emerald-300/35",
+            iconClassName: "text-emerald-200",
+          },
+        ]
+      : []),
     {
       key: "instagram",
       label: "instagram",
@@ -86,7 +90,7 @@ export const links: LinksItem[] = [
   {
     key: "site",
     label: "portfolio site",
-    subtitle: "naqihaider.vercel.app",
+    subtitle: "naqi",
     href: "/",
     icon: GlobeAltIcon,
     variant: "primary",
@@ -126,7 +130,7 @@ export const links: LinksItem[] = [
     key: "linkedin",
     label: "linkedin",
     subtitle: "work experience + contact",
-    href: "https://www.linkedin.com/in/naqi-haider7/",
+    href: process.env.NEXT_PUBLIC_LINKEDIN_URL ?? "https://www.linkedin.com/",
     icon: UserCircleIcon,
     external: true,
     accentClassName:

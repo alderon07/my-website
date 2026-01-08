@@ -141,7 +141,7 @@ After buying domain:
 
 ### 4. DNS & Domain Security
 
-When you purchase `naqihaider.com`:
+When you purchase `yourdomain.com`:
 
 #### Configure DNS Security
 
@@ -152,19 +152,19 @@ When you purchase `naqihaider.com`:
 
 2. **CAA Records (Certificate Authority Authorization):**
    ```
-   naqihaider.com. CAA 0 issue "letsencrypt.org"
-   naqihaider.com. CAA 0 issuewild "letsencrypt.org"
+   yourdomain.com. CAA 0 issue "letsencrypt.org"
+   yourdomain.com. CAA 0 issuewild "letsencrypt.org"
    ```
 
 3. **SPF Record (Email security, if using domain for email):**
    ```
-   naqihaider.com. TXT "v=spf1 -all"
+   yourdomain.com. TXT "v=spf1 -all"
    ```
    (Use `-all` if not sending email from domain)
 
 4. **DMARC Record (Email security):**
    ```
-   _dmarc.naqihaider.com. TXT "v=DMARC1; p=reject; rua=mailto:dmarc@naqihaider.com"
+   _dmarc.yourdomain.com. TXT "v=DMARC1; p=reject; rua=mailto:dmarc@yourdomain.com"
    ```
 
 ---
@@ -177,13 +177,13 @@ Run these tests on your deployed site:
 
 1. **Security Headers:**
    ```
-   https://securityheaders.com/?q=https://naqihaider.com
+   https://securityheaders.com/?q=https://yourdomain.com
    ```
    Target: A+ rating
 
 2. **SSL/TLS Configuration:**
    ```
-   https://www.ssllabs.com/ssltest/analyze.html?d=naqihaider.com
+   https://www.ssllabs.com/ssltest/analyze.html?d=yourdomain.com
    ```
    Target: A rating
 
@@ -286,12 +286,12 @@ After deploying to production, verify everything:
 
 1. **HTTPS Redirect:**
    ```
-   http://naqihaider.com → should redirect to https://
+   http://yourdomain.com → should redirect to https://
    ```
 
 2. **Security Headers Present:**
    ```bash
-   curl -I https://naqihaider.com | grep -E "(Strict-Transport|X-Frame|X-Content|CSP)"
+   curl -I https://yourdomain.com | grep -E "(Strict-Transport|X-Frame|X-Content|CSP)"
    ```
 
 3. **API Works:**
@@ -321,7 +321,7 @@ Create a simple test script:
 #!/bin/bash
 # security-test.sh
 
-SITE="https://naqihaider.com"
+SITE="https://yourdomain.com"
 
 echo "Testing security headers..."
 curl -s -I $SITE | grep "Strict-Transport-Security"
@@ -329,7 +329,7 @@ curl -s -I $SITE | grep "X-Frame-Options"
 curl -s -I $SITE | grep "X-Content-Type-Options"
 
 echo "Testing HTTPS redirect..."
-curl -s -I http://naqihaider.com | grep "301\|302\|307\|308"
+curl -s -I http://yourdomain.com | grep "301\|302\|307\|308"
 
 echo "Testing sitemap..."
 curl -s $SITE/sitemap.xml | grep "<urlset"
@@ -432,7 +432,7 @@ npm update
 npm run build && npm start
 
 # Check headers
-curl -I https://naqihaider.com
+curl -I https://yourdomain.com
 ```
 
 ### Important URLs

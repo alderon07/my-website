@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import { Rubik, Nabla } from "next/font/google";
 import { ThemeProvider } from "./components/ThemeProvider";
+import { SITE_NAME, getSiteUrl } from "./site";
 import "./globals.css";
 
 const rubik = Rubik({
@@ -17,15 +18,15 @@ const nabla = Nabla({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://naqihaider.vercel.app"),
+  metadataBase: new URL(getSiteUrl()),
   title: {
-    default: "Naqi Haider – Software Developer & Photographer",
-    template: "%s | Naqi Haider",
+    default: `${SITE_NAME} – Software Developer & Photographer`,
+    template: `%s | ${SITE_NAME}`,
   },
   description:
     "Remote software developer specializing in full-stack applications with TypeScript, Go, Next.js, and React. Building modern web experiences with a passion for clean code and photography.",
   keywords: [
-    "Naqi Haider",
+    SITE_NAME,
     "Software Developer",
     "Full Stack Developer",
     "Remote Software Developer",
@@ -55,9 +56,9 @@ export const metadata: Metadata = {
     "Portfolio",
     "Photographer",
   ],
-  authors: [{ name: "Naqi Haider", url: "https://naqihaider.vercel.app" }],
-  creator: "Naqi Haider",
-  publisher: "Naqi Haider",
+  authors: [{ name: SITE_NAME, url: getSiteUrl() }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
   formatDetection: {
     email: false,
     address: false,
@@ -76,9 +77,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://naqihaider.vercel.app",
-    siteName: "Naqi Haider Portfolio",
-    title: "Naqi Haider – Software Developer & Photographer",
+    url: getSiteUrl(),
+    siteName: `${SITE_NAME} Portfolio`,
+    title: `${SITE_NAME} – Software Developer & Photographer`,
     description:
       "Remote software developer specializing in full-stack applications with TypeScript, Go, Next.js, and React. Building modern web experiences with a passion for clean code and photography.",
     images: [
@@ -86,13 +87,13 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Naqi Haider - Software Developer",
+        alt: `${SITE_NAME} - Software Developer`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Naqi Haider – Software Developer & Photographer",
+    title: `${SITE_NAME} – Software Developer & Photographer`,
     description:
       "Remote software developer specializing in full-stack applications with TypeScript, Go, Next.js, and React.",
     images: ["/og-image.jpg"],

@@ -25,7 +25,7 @@ export default function Navbar() {
               width={56}
               height={56}
               src="/logo.svg"
-              alt="Naqi Haider logo"
+              alt="Naqi logo"
             />
           </Link>
         </div>

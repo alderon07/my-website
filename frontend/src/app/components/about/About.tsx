@@ -23,7 +23,7 @@ export default function About() {
               <Image
                 className="rounded-3xl object-cover mix-blend-overlay w-full h-auto"
                 src="/me-square.jpg"
-                alt="Portrait of Naqi Haider, software developer"
+                alt="Portrait of Naqi, software developer"
                 quality={100}
                 width={400}
                 height={400}

@@ -204,14 +204,14 @@ curl https://api.github.com/rate_limit
 ### For Domain Security
 
 #### **1. Configure DNS Security**
-When you buy `naqihaider.com`:
+When you buy `yourdomain.com`:
 - ✅ Enable DNSSEC (if registrar supports)
 - ✅ Use Vercel's nameservers (or proper DNS records)
 - ✅ Enable CAA records (Certificate Authority Authorization)
 
 Example CAA record:
 ```
-naqihaider.com. CAA 0 issue "letsencrypt.org"
+yourdomain.com. CAA 0 issue "letsencrypt.org"
 ```
 
 #### **2. HSTS Preload (Advanced)**
@@ -287,7 +287,7 @@ Test your deployed site:
 
 ### **Security Headers**
 ```bash
-curl -I https://naqihaider.vercel.app
+curl -I https://your-site.vercel.app
 ```
 
 ### **Online Tools**

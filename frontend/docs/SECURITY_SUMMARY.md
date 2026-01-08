@@ -84,8 +84,8 @@ npm start
 
 ### After Deployment
 Test your security:
-1. **Headers:** https://securityheaders.com/?q=https://naqihaider.com
-2. **SSL:** https://www.ssllabs.com/ssltest/analyze.html?d=naqihaider.com
+1. **Headers:** https://securityheaders.com/?q=https://yourdomain.com
+2. **SSL:** https://www.ssllabs.com/ssltest/analyze.html?d=yourdomain.com
 3. **Overall:** https://observatory.mozilla.org/
 
 **Target: All A or A+ ratings** ⭐
@@ -124,7 +124,7 @@ fetch(url, {
 
 ## 🚨 Important: Manual Steps Required
 
-### 1. **After Buying Domain** (naqihaider.com)
+### 1. **After Buying Domain** (yourdomain.com)
 Update these 4 URLs:
 - `src/app/layout.tsx` line 20
 - `src/app/sitemap.ts` line 4
@@ -134,7 +134,7 @@ Update these 4 URLs:
 **Quick replace:**
 ```bash
 find frontend -type f \( -name "*.ts" -o -name "*.tsx" -o -name "*.txt" \) \
-  -exec sed -i 's/naqihaider.vercel.app/naqihaider.com/g' {} +
+  -exec sed -i 's/your-site.vercel.app/yourdomain.com/g' {} +
 ```
 
 ### 2. **Enable GitHub Security Features**

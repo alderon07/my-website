@@ -17,7 +17,7 @@ export default function Intro() {
               id="intro-heading"
               className="text-5xl font-semibold transition delay-100 duration-200 ease-in-out hover:scale-105 lg:text-6xl xl:text-8xl bg-gradient-to-r from-emerald-700 via-teal-600 to-amber-700 dark:from-rose-400 dark:via-pink-400 dark:to-indigo-400 bg-clip-text text-transparent animate-gradient bg-[length:200%_200%] whitespace-nowrap"
             >
-              Naqi Haider.
+              Naqi.
             </h1>
             {/* Profile Picture - Only visible on desktop (lg and above) */}
             <div className="hidden lg:block w-full max-w-md lg:max-w-lg xl:max-w-xl py-4 justify-center items-center">
@@ -25,7 +25,7 @@ export default function Intro() {
                 <Image
                   className="rounded-3xl object-cover mix-blend-overlay w-full h-auto mx-auto"
                   src="/me-square.jpg"
-                  alt="Portrait of Naqi Haider, software developer"
+                  alt="Portrait of Naqi, software developer"
                   quality={100}
                   width={300}
                   height={300}

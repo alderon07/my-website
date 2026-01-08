@@ -6,24 +6,28 @@ import Skills from "./components/skills/Skills";
 import Work from "./components/work/Work";
 import Projects from "./components/projects/Projects";
 import Footer from "./components/footer/Footer";
+import { getSiteUrl } from "./site";
 
 export default function Home() {
+  const siteUrl = getSiteUrl();
+  const sameAs = [
+    "https://github.com/alderon07",
+    process.env.NEXT_PUBLIC_LINKEDIN_URL,
+  ].filter(Boolean);
+
   // JSON-LD structured data for SEO
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Naqi Haider",
-    url: "https://naqihaider.vercel.app",
-    image: "https://naqihaider.vercel.app/me-square.jpg",
+    name: "Naqi",
+    url: siteUrl,
+    image: `${siteUrl}/me-square.jpg`,
     jobTitle: "Remote Software Developer",
     worksFor: {
       "@type": "Organization",
       name: "Haley Marketing",
     },
-    sameAs: [
-      "https://github.com/alderon07",
-      "https://www.linkedin.com/in/naqi-haider7/",
-    ],
+    sameAs,
     knowsAbout: [
       "TypeScript",
       "JavaScript",
