@@ -4,7 +4,6 @@ import {
   CodeBracketIcon,
   GlobeAltIcon,
   ShoppingBagIcon,
-  UserCircleIcon,
 } from "@heroicons/react/24/solid";
 import InstagramIcon from "./InstagramIcon";
 import MailIcon from "./MailIcon";
@@ -125,17 +124,6 @@ export const links: LinksItem[] = [
       "hover:ring-violet-400/25 hover:border-violet-400/25 dark:hover:ring-violet-300/20 dark:hover:border-violet-300/20",
     iconWrapClassName:
       "bg-violet-500/15 ring-1 ring-violet-400/20 text-violet-200",
-  },
-  {
-    key: "linkedin",
-    label: "linkedin",
-    subtitle: "work experience + contact",
-    href: process.env.NEXT_PUBLIC_LINKEDIN_URL ?? "https://www.linkedin.com/",
-    icon: UserCircleIcon,
-    external: true,
-    accentClassName:
-      "hover:ring-sky-400/25 hover:border-sky-400/25 dark:hover:ring-sky-300/20 dark:hover:border-sky-300/20",
-    iconWrapClassName: "bg-sky-500/15 ring-1 ring-sky-400/20 text-sky-200",
   },
   {
     key: "photography",
