@@ -1,6 +1,24 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+
+  // Rewrites to proxy PostHog requests (avoids ad blockers)
+  async rewrites() {
+    return [
+      {
+        source: "/ingest/static/:path*",
+        destination: "https://us-assets.i.posthog.com/static/:path*",
+      },
+      {
+        source: "/ingest/:path*",
+        destination: "https://us.i.posthog.com/:path*",
+      },
+      {
+        source: "/ingest/decide",
+        destination: "https://us.i.posthog.com/decide",
+      },
+    ];
+  },
   
   // Security Headers
   async headers() {
@@ -45,14 +63,15 @@ const nextConfig = {
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
               "font-src 'self' https://fonts.gstatic.com data:",
               "img-src 'self' data: https: blob:",
-              "connect-src 'self' https://api.github.com https://raw.githubusercontent.com https://www.anthropic.com",
+              "connect-src 'self' https://api.github.com https://raw.githubusercontent.com https://www.anthropic.com https://us.i.posthog.com https://us-assets.i.posthog.com",
               "frame-src 'self' https://open.spotify.com",
               "object-src 'none'",
               "base-uri 'self'",
               "form-action 'self'",
               "frame-ancestors 'self'",
-              "upgrade-insecure-requests"
-            ].join('; ')
+              // Only upgrade insecure requests in production (breaks localhost)
+              process.env.NODE_ENV === 'production' ? "upgrade-insecure-requests" : ""
+            ].filter(Boolean).join('; ')
           }
         ],
       },

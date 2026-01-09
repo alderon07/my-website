@@ -4,6 +4,7 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { usePostHog } from "posthog-js/react";
 import { LinkIcon } from "@heroicons/react/24/solid";
 import { linksTheme } from "./links-theme";
 import { links, linksProfile, spotifyNowPlaying } from "./links-data";
@@ -23,6 +24,7 @@ type NowPlayingState =
 
 export default function LinksContentClient() {
   const router = useRouter();
+  const posthog = usePostHog();
   const [copied, setCopied] = useState(false);
   const [nowPlaying, setNowPlaying] = useState<NowPlayingState>({
     status: "loading",
@@ -101,6 +103,7 @@ export default function LinksContentClient() {
     try {
       await navigator.clipboard.writeText(url);
       setCopied(true);
+      posthog?.capture("page_url_copied");
     } catch {
       // fallback: old-school textarea copy
       try {
@@ -113,11 +116,12 @@ export default function LinksContentClient() {
         document.execCommand("copy");
         document.body.removeChild(el);
         setCopied(true);
+        posthog?.capture("page_url_copied");
       } catch {
         // no-op
       }
     }
-  }, []);
+  }, [posthog]);
 
   const maybeConfettiThenNavigate = useCallback(
     async (href: string) => {
@@ -212,8 +216,8 @@ export default function LinksContentClient() {
                 <Link
                   key={quickLink.key}
                   href={quickLink.href}
-                  target={isExternal ? "_blank" : undefined}
-                  rel={isExternal ? "noopener noreferrer" : undefined}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={[
                     linksTheme.quickIconButton,
                     quickLink.buttonClassName,
@@ -222,6 +226,15 @@ export default function LinksContentClient() {
                     .join(" ")}
                   aria-label={quickLink.ariaLabel ?? quickLink.label}
                   title={quickLink.label}
+                  onClick={() => {
+                    posthog?.capture("link_clicked", {
+                      link_key: quickLink.key,
+                      link_label: quickLink.label,
+                      link_href: quickLink.href,
+                      is_external: isExternal,
+                      link_type: "quick_link",
+                    });
+                  }}
                 >
                   <Icon
                     className={[linksTheme.quickIcon, quickLink.iconClassName]
@@ -239,8 +252,8 @@ export default function LinksContentClient() {
           {links.map((item) => {
             const Icon = item.icon;
             const isExternal = item.external ?? item.href.startsWith("http");
-            const rel = isExternal ? "noopener noreferrer" : undefined;
-            const target = isExternal ? "_blank" : undefined;
+            const rel = "noopener noreferrer";
+            const target = "_blank";
 
             const buttonClassName = [
               linksTheme.linkButtonBase,
@@ -262,6 +275,14 @@ export default function LinksContentClient() {
                 className={buttonClassName}
                 aria-label={item.ariaLabel ?? item.label}
                 onClick={(e) => {
+                  posthog?.capture("link_clicked", {
+                    link_key: item.key,
+                    link_label: item.label,
+                    link_href: item.href,
+                    is_external: isExternal,
+                    link_type: "main_link",
+                  });
+
                   if (!isConfetti) return;
                   e.preventDefault();
                   void maybeConfettiThenNavigate(item.href);
@@ -310,6 +331,15 @@ export default function LinksContentClient() {
               target="_blank"
               rel="noopener noreferrer"
               className={linksTheme.spotifyOpenLink}
+              onClick={() => {
+                posthog?.capture("link_clicked", {
+                  link_key: "spotify_profile",
+                  link_label: "Open Spotify",
+                  link_href: spotifyNowPlaying.openUrl,
+                  is_external: true,
+                  link_type: "spotify",
+                });
+              }}
             >
               open
             </Link>
@@ -330,6 +360,15 @@ export default function LinksContentClient() {
               rel="noopener noreferrer"
               className="flex items-center gap-3 rounded-xl bg-white/5 p-2 hover:bg-white/10 transition-colors"
               aria-label={`open now playing: ${nowPlaying.title} by ${nowPlaying.artist}`}
+              onClick={() => {
+                posthog?.capture("link_clicked", {
+                  link_key: "spotify_now_playing",
+                  link_label: nowPlaying.title,
+                  link_href: nowPlaying.songUrl,
+                  is_external: true,
+                  link_type: "spotify",
+                });
+              }}
             >
               <div className="h-12 w-12 overflow-hidden rounded-lg bg-white/10 ring-1 ring-white/10">
                 {nowPlaying.albumImageUrl ? (
@@ -356,7 +395,7 @@ export default function LinksContentClient() {
         </div>
 
         <div className={linksTheme.footer}>
-          <Link href="/" className={linksTheme.footerLink}>
+          <Link href="/" target="_blank" rel="noopener noreferrer" className={linksTheme.footerLink}>
             Back to site
           </Link>
           <span

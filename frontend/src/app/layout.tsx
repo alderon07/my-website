@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import { Rubik, Nabla } from "next/font/google";
 import { ThemeProvider } from "./components/ThemeProvider";
+import { PostHogProvider } from "./providers/PostHogProvider";
 import { SITE_NAME, getSiteUrl } from "./site";
 import "./globals.css";
 
@@ -132,7 +133,9 @@ export default function RootLayout({
       <body
         className={`${rubik.variable} ${nabla.variable} font-rubik antialiased`}
       >
-        <ThemeProvider>{children}</ThemeProvider>
+        <PostHogProvider>
+          <ThemeProvider>{children}</ThemeProvider>
+        </PostHogProvider>
       </body>
     </html>
   );
