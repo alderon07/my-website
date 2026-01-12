@@ -9,7 +9,7 @@ export default function Intro() {
       >
         <div className="flex flex-col justify-center items-center gap-8 px-12 py-8 md:px-16 md:py-10 lg:px-20 lg:py-12 xl:px-24 xl:py-16 rounded-3xl transition lg:shadow-2xl lg:hover:shadow-emerald-900/50 dark:lg:hover:shadow-indigo-400/50 hover:scale-[1.02] duration-300 w-4/5">
           {/* Text Content */}
-          <div className="flex flex-col gap-2 xl:items-center xl:text-center">
+          <div className="flex flex-col gap-2 items-center text-center">
             <p className="text-lg font-medium lg:text-xl xl:text-2xl animate-slide-up">
               Hello, my name is
             </p>
@@ -33,7 +33,7 @@ export default function Intro() {
                 />
               </div>
             </div>
-            <p className="text-3xl lg:text-4xl xl:text-6xl animate-slide-up">
+            <p className="text-2xl sm:text-3xl lg:text-4xl xl:text-6xl animate-slide-up whitespace-nowrap">
               I build dope things.
             </p>
           </div>
