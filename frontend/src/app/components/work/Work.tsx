@@ -58,11 +58,11 @@ export default function Work() {
 
         {/* Experience Card */}
         <div className="relative glass-card pixel-shadow-pink hover-glow rounded-2xl p-8 md:p-12 transition-all duration-500">
-          {/* Timeline line */}
-          <div className="absolute left-4 md:left-8 top-40 md:top-36 bottom-24 w-[2px] bg-gradient-to-b from-cyber-cyan via-cyber-pink to-cyber-lime opacity-50" />
+          {/* Timeline line - positioned to align with quest bullets */}
+          <div className="absolute left-[2.25rem] md:left-[3.25rem] top-44 md:top-40 bottom-28 w-[2px] bg-gradient-to-b from-cyber-cyan via-cyber-pink to-cyber-lime opacity-50" />
 
-          {/* Company Header */}
-          <div className="mb-8">
+          {/* Company Header - Primary heading, no indent */}
+          <div className="mb-6">
             <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
               <h3 className="text-2xl md:text-3xl font-heading font-bold text-cyber-cyan">
                 Software Engineer
@@ -81,21 +81,26 @@ export default function Work() {
                 </span>
               </Link>
             </div>
-            
-            {/* Quest header */}
-            <div className="mt-4 ml-8 md:ml-12 flex items-center gap-2 text-cyber-text/60 font-mono text-sm uppercase tracking-wider">
-              <span className="text-cyber-lime">◆</span>
-              <span>Active Quests</span>
-              <span className="text-cyber-cyan">({experiences.filter(e => e.completed).length}/{experiences.length} completed)</span>
-            </div>
           </div>
 
-          {/* Quest Objectives - Gaming styled list */}
-          <ul className="space-y-4 pl-8 md:pl-12">
+          {/* Sub heading - Active Quests - aligned with timeline */}
+          <div className="mb-4 flex items-center gap-2 text-cyber-text/60 font-mono text-sm uppercase tracking-wider">
+            <span className="text-cyber-lime">◆</span>
+            <span>Active Quests</span>
+            <span className="text-cyber-cyan">
+              ({experiences.filter((e) => e.completed).length}/
+              {experiences.length} completed)
+            </span>
+          </div>
+
+          {/* Quest Objectives - indented from timeline */}
+          <ul className="space-y-4 ml-4 md:ml-6 pl-4 border-l-0">
             {experiences.map((exp, index) => (
               <li
                 key={index}
-                className={`quest-bullet ${exp.completed ? 'completed' : ''} text-base md:text-lg text-cyber-text/90 leading-relaxed animate-slide-up transition-all duration-300 hover:text-cyber-text hover:translate-x-2`}
+                className={`quest-bullet ${
+                  exp.completed ? "completed" : ""
+                } text-base md:text-lg text-cyber-text/90 leading-relaxed animate-slide-up transition-all duration-300 hover:text-cyber-text hover:translate-x-2`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {exp.text}
@@ -103,10 +108,12 @@ export default function Work() {
             ))}
           </ul>
 
-          {/* XP Reward indicator */}
-          <div className="mt-8 pt-6 border-t border-cyber-cyan/20 ml-8 md:ml-12">
+          {/* XP Reward indicator - aligned with quest items */}
+          <div className="mt-8 pt-6 border-t border-cyber-cyan/20 ml-4 md:ml-6">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 text-sm font-mono">
-              <span className="text-cyber-text/60 uppercase tracking-wider">Quest Rewards</span>
+              <span className="text-cyber-text/60 uppercase tracking-wider">
+                Quest Rewards
+              </span>
               <div className="flex flex-wrap items-center gap-3 md:gap-4">
                 <span className="text-cyber-lime">+5000 XP</span>
                 <span className="text-cyber-pink">+3 Skill Points</span>
