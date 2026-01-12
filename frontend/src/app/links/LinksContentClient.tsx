@@ -323,7 +323,7 @@ export default function LinksContentClient() {
           })}
         </div>
 
-        <div className={linksTheme.spotifyWrap} aria-label="Spotify now playing">
+        {/* <div className={linksTheme.spotifyWrap} aria-label="Spotify now playing">
           <div className={linksTheme.spotifyTitleRow}>
             <span className={linksTheme.spotifyTitle}>{spotifyNowPlaying.title}</span>
             <Link
@@ -392,7 +392,7 @@ export default function LinksContentClient() {
               </div>
             </Link>
           )}
-        </div>
+        </div> */}
 
         <div className={linksTheme.footer}>
           <Link href="/" target="_blank" rel="noopener noreferrer" className={linksTheme.footerLink}>

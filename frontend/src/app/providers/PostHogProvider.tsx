@@ -16,7 +16,7 @@ if (typeof window !== "undefined") {
       // Security & Privacy best practices
       persistence: "localStorage",
       autocapture: false, // Disable auto-capture to control what's tracked
-      capture_pageview: false, // Manual pageview control
+      capture_pageview: true, // Manual pageview control
       disable_session_recording: true, // Disable session replay by default
       mask_all_text: true, // If session replay enabled later, mask all text
       mask_all_element_attributes: true, // Mask sensitive attributes
