@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function About() {
   return (
     <div
@@ -29,26 +27,9 @@ export default function About() {
           <div className="absolute bottom-4 left-4 w-8 h-8 border-b-2 border-l-2 border-cyber-pink transition-all duration-300 group-hover:w-12 group-hover:h-12 group-hover:border-cyber-cyan" />
           <div className="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-cyber-pink transition-all duration-300 group-hover:w-12 group-hover:h-12 group-hover:border-cyber-cyan" />
 
-          <div className="flex flex-col lg:flex-row gap-8 items-center">
-            {/* Profile Picture - Mobile only */}
-            <div className="lg:hidden w-full max-w-sm">
-              <div className="relative group/img">
-                <div className="absolute -inset-1 bg-gradient-to-r from-cyber-cyan via-cyber-pink to-cyber-lime rounded-2xl blur opacity-50 group-hover/img:opacity-75 transition-opacity" />
-                <div className="relative p-1 rounded-2xl bg-gradient-to-r from-cyber-cyan to-cyber-pink">
-                  <Image
-                    className="rounded-2xl object-cover w-full h-auto bg-cyber-black"
-                    src="/me-square.jpg"
-                    alt="Portrait of Naqi, software developer"
-                    quality={100}
-                    width={400}
-                    height={400}
-                  />
-                </div>
-              </div>
-            </div>
-
+          <div className="flex flex-col gap-8">
             {/* Text Content */}
-            <div className="flex-1 space-y-6">
+            <div className="space-y-6">
               <p className="text-lg md:text-xl leading-relaxed text-cyber-text">
                 Hey, I&apos;m <span className="text-cyber-cyan font-bold neon-text-cyan">Naqi</span> 👋 — a software developer who finds joy in both
                 clean code and chaotic team fights on Summoner&apos;s Rift 🎮.
