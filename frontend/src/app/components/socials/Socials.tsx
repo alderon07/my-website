@@ -1,25 +1,24 @@
 import Link from "next/link";
 
-type Style = { style: string };
-
-export default function Socials({ style }: Style) {
+export default function Socials() {
   const linkedinUrl = process.env.NEXT_PUBLIC_LINKEDIN_URL;
 
   return (
     <>
-      <li id="github" className={`${style} hover:scale-110`}>
+      <li id="github">
         <Link
           href="https://github.com/alderon07"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Visit Naqi's GitHub profile (opens in new tab)"
+          className="group flex items-center text-cyber-text hover:text-cyber-cyan transition-all duration-300 neon-underline py-2"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             role="img"
             viewBox="0 0 24 24"
             fill="currentColor"
-            className="stoke-2 h-5 w-5 stroke-current"
+            className="h-5 w-5 transition-all duration-300 group-hover:drop-shadow-[0_0_10px_rgba(0,240,255,0.8)]"
             aria-hidden="true"
           >
             <title>Github</title>
@@ -28,19 +27,20 @@ export default function Socials({ style }: Style) {
         </Link>
       </li>
       {linkedinUrl ? (
-        <li id="linkedin" className={`${style} hover:scale-110`}>
+        <li id="linkedin">
           <Link
             href={linkedinUrl}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Visit Naqi's LinkedIn profile (opens in new tab)"
+            className="group flex items-center text-cyber-text hover:text-cyber-pink transition-all duration-300 neon-underline py-2"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               role="img"
               viewBox="0 0 24 24"
               fill="currentColor"
-              className="h-5 w-5"
+              className="h-5 w-5 transition-all duration-300 group-hover:drop-shadow-[0_0_10px_rgba(255,0,170,0.8)]"
               aria-hidden="true"
             >
               <title>LinkedIn</title>

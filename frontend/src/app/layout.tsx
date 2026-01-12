@@ -1,13 +1,18 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Rubik, Nabla } from "next/font/google";
-import { ThemeProvider } from "./components/ThemeProvider";
+import { Orbitron, JetBrains_Mono, Nabla } from "next/font/google";
 import { PostHogProvider } from "./providers/PostHogProvider";
 import { SITE_NAME, getSiteUrl } from "./site";
 import "./globals.css";
 
-const rubik = Rubik({
-  variable: "--rubik-font",
+const orbitron = Orbitron({
+  variable: "--orbitron-font",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--jetbrains-font",
   subsets: ["latin"],
   display: "swap",
 });
@@ -67,10 +72,8 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      // Preferred PNG favicon
       { url: "/logo-bg-2.png", sizes: "32x32", type: "image/png" },
       { url: "/logo-bg-2.png", sizes: "16x16", type: "image/png" },
-      // Fallback ICO favicon for older browsers
       { url: "/favicon.ico", rel: "icon", sizes: "any" as any },
     ],
     apple: [{ url: "/logo-bg-2.png", sizes: "180x180", type: "image/png" }],
@@ -110,12 +113,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    // Add your verification codes here when you get them
-    // google: 'your-google-verification-code',
-    // yandex: 'your-yandex-verification-code',
-    // bing: 'your-bing-verification-code',
-  },
+  verification: {},
 };
 
 export default function RootLayout({
@@ -124,17 +122,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="dark">
       <head>
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#059669" />
+        <meta name="theme-color" content="#0a0a0f" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body
-        className={`${rubik.variable} ${nabla.variable} font-rubik antialiased`}
+        className={`${orbitron.variable} ${jetbrainsMono.variable} ${nabla.variable} font-mono antialiased`}
       >
         <PostHogProvider>
-          <ThemeProvider>{children}</ThemeProvider>
+          {children}
         </PostHogProvider>
       </body>
     </html>

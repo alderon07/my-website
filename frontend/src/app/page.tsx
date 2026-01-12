@@ -75,9 +75,9 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <div className="flex flex-col gap-4 font-mono">
+      <div className="flex flex-col font-mono min-h-screen bg-cyber-black">
         <Navbar />
-        <main id="main-content">
+        <main id="main-content" className="flex-1">
           <Intro />
           <About />
           <Skills />
