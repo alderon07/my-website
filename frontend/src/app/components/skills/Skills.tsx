@@ -127,6 +127,11 @@ export default function Skills() {
       category: "Tools & Cloud",
       iconUrl: "/cursor.png",
     },
+    {
+      name: "Claude Code",
+      category: "Tools & Cloud",
+      iconUrl: "/claude-code.png",
+    },
   ];
 
   const categories = [
