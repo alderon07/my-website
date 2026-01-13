@@ -38,9 +38,9 @@ export default function Footer() {
         <div className="w-48 h-[1px] bg-gradient-to-r from-transparent via-cyber-cyan to-transparent" />
 
         {/* Copyright */}
-        <p className="text-xs font-mono text-cyber-text/40 uppercase tracking-wider">
+        {/* <p className="text-xs font-mono text-cyber-text/40 uppercase tracking-wider">
           © {new Date().getFullYear()} All Rights Reserved
-        </p>
+        </p> */}
 
         {/* Easter egg / fun text */}
         <p className="text-xs font-mono text-cyber-pink/50 animate-pulse">
