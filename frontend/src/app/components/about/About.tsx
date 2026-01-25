@@ -55,17 +55,17 @@ export default function About() {
               </p>
 
               {/* Interests tags */}
-              <div className="flex flex-wrap gap-3 pt-4">
+              <ul className="flex flex-wrap gap-3 pt-4 list-none" aria-label="Interests">
                 {["Gaming", "Photography", "Music", "Anime", "Coding"].map((tag, index) => (
-                  <span 
+                  <li
                     key={tag}
                     className="achievement-badge hover:bg-cyber-cyan/20 transition-all duration-300 cursor-default"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     {tag}
-                  </span>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           </div>
         </div>

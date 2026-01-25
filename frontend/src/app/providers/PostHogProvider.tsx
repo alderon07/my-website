@@ -6,6 +6,7 @@ import { PostHogProvider as PHProvider } from "posthog-js/react";
 // Initialize PostHog synchronously (only runs in browser)
 if (typeof window !== "undefined") {
   const key = process.env.NEXT_PUBLIC_POSTHOG_KEY;
+  const isDev = process.env.NODE_ENV === "development";
 
   // Only initialize if we have a valid key and haven't already initialized
   if (key && key !== "your_posthog_project_api_key" && !posthog.__loaded) {
@@ -20,12 +21,14 @@ if (typeof window !== "undefined") {
       disable_session_recording: true, // Disable session replay by default
       mask_all_text: true, // If session replay enabled later, mask all text
       mask_all_element_attributes: true, // Mask sensitive attributes
-      // Note: respect_dnt disabled - add back if you want to honor Do Not Track
-      // respect_dnt: true,
+      // Privacy: Honor Do Not Track browser setting
+      respect_dnt: true,
     });
 
-    // Expose posthog globally for debugging (can be removed in production)
-    (window as any).posthog = posthog;
+    // Only expose posthog globally in development for debugging
+    if (isDev) {
+      (window as any).posthog = posthog;
+    }
   }
 }
 

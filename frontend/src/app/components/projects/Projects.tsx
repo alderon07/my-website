@@ -1,7 +1,13 @@
 "use client";
 
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import {
+  priorityRepos,
+  projectTechStack,
+  languageColors,
+  githubUsername,
+} from "@/app/data/projects-config";
 
 interface Repository {
   id: number;
@@ -20,50 +26,27 @@ export default function Projects() {
   const [repos, setRepos] = useState<Repository[]>([]);
   const [loading, setLoading] = useState(true);
 
-  // Priority repos to display first
-  const priorityRepos = useMemo(
-    () => ["my-website", "link-it", "godoit", "kv", "cocktail-app"],
-    []
-  );
-
-  // Custom tech stack for each project
-  const projectTechStack: { [key: string]: string[] } = {
-    "my-website": ["React", "TypeScript", "Next.js", "Tailwind-CSS"],
-    "link-it": ["TypeScript", "Next.js", "Tailwind-CSS", "React"],
-    godoit: ["Go"],
-    kv: ["Go"],
-    "cocktail-app": ["React", "TypeScript", "Tailwind-CSS"],
-  };
-
   useEffect(() => {
     async function fetchRepos() {
       try {
-        const headers: HeadersInit = {
-          Accept: "application/vnd.github.v3+json",
-        };
-
-        const token = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
-        if (token) {
-          headers["Authorization"] = `Bearer ${token}`;
-        }
-
-        const response = await fetch(
-          "https://api.github.com/users/alderon07/repos?sort=updated&per_page=100",
-          {
-            headers,
-            next: { revalidate: 3600 },
-          }
-        );
+        // Fetch from server-side API route (GitHub token is kept server-side)
+        const response = await fetch("/api/github/repos");
 
         if (!response.ok) {
-          throw new Error(`GitHub API error: ${response.status}`);
+          throw new Error(`API error: ${response.status}`);
         }
 
-        const data: Repository[] = await response.json();
-        const pinned = data.filter((repo) => priorityRepos.includes(repo.name));
+        const { repos: data, error } = await response.json() as { repos: Repository[]; error?: string };
+
+        if (error) {
+          throw new Error(error);
+        }
+
+        const priorityList: string[] = [...priorityRepos];
+        const pinned = data.filter((repo) => priorityList.includes(repo.name));
         const sorted = pinned.sort((a, b) => {
-          const aIndex = priorityRepos.indexOf(a.name);
-          const bIndex = priorityRepos.indexOf(b.name);
+          const aIndex = priorityList.indexOf(a.name);
+          const bIndex = priorityList.indexOf(b.name);
           return aIndex - bIndex;
         });
 
@@ -79,18 +62,10 @@ export default function Projects() {
     }
 
     fetchRepos();
-  }, [priorityRepos]);
+  }, []);
 
   const getLanguageColor = (language: string) => {
-    const colors: { [key: string]: string } = {
-      TypeScript: "text-cyber-cyan",
-      JavaScript: "text-yellow-400",
-      Go: "text-cyber-cyan",
-      Python: "text-cyber-lime",
-      Java: "text-cyber-pink",
-      Perl: "text-purple-400",
-    };
-    return colors[language] || "text-cyber-text";
+    return languageColors[language] || "text-cyber-text";
   };
 
   if (loading) {
@@ -256,7 +231,7 @@ export default function Projects() {
         {/* View All Button */}
         <div className="flex justify-center mt-8">
           <Link
-            href="https://github.com/alderon07"
+            href={`https://github.com/${githubUsername}`}
             target="_blank"
             rel="noopener noreferrer"
             className="group relative px-8 py-4 font-heading font-bold uppercase tracking-wider text-cyber-text transition-all duration-300"

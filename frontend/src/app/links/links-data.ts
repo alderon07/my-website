@@ -50,17 +50,21 @@ export const linksProfile: LinksProfile = {
           },
         ]
       : []),
-    {
-      key: "instagram",
-      label: "instagram",
-      href: "https://www.instagram.com/",
-      icon: InstagramIcon,
-      external: true,
-      ariaLabel: "Open Instagram (new tab)",
-      buttonClassName:
-        "bg-fuchsia-500/18 ring-1 ring-fuchsia-400/25 text-fuchsia-200 hover:bg-fuchsia-500/26 hover:ring-fuchsia-300/35",
-      iconClassName: "text-fuchsia-200",
-    },
+    ...(process.env.NEXT_PUBLIC_INSTAGRAM_URL
+      ? [
+          {
+            key: "instagram",
+            label: "instagram",
+            href: process.env.NEXT_PUBLIC_INSTAGRAM_URL,
+            icon: InstagramIcon,
+            external: true,
+            ariaLabel: "Open Instagram (new tab)",
+            buttonClassName:
+              "bg-fuchsia-500/18 ring-1 ring-fuchsia-400/25 text-fuchsia-200 hover:bg-fuchsia-500/26 hover:ring-fuchsia-300/35",
+            iconClassName: "text-fuchsia-200",
+          },
+        ]
+      : []),
   ],
 };
 

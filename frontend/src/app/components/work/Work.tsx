@@ -1,40 +1,7 @@
 import Link from "next/link";
+import { experiences, currentJob } from "@/app/data/experiences";
 
 export default function Work() {
-  const experiences = [
-    {
-      completed: true,
-      text: "Engineered backend integrations for ATS platforms and third-party services (e.g., Indeed, ZipRecruiter, Bullhorn), supporting 20+ systems, 1M+ job listings and candidates.",
-    },
-    {
-      completed: true,
-      text: "Leveraged Cursor to automate and scale ATS integration development, reducing manual effort and improving turnaround time.",
-    },
-    {
-      completed: true,
-      text: "Improved CI/CD deployment speed by 40% by replacing Docker-based Bitbucket runners with lightweight Linux shell runners.",
-    },
-    {
-      completed: true,
-      text: "Optimized SQL queries and caching strategies, improving system performance by 15%.",
-    },
-    {
-      completed: true,
-      text: "Revamped frontend user flows using AngularJS and jQuery, increasing engagement through a more intuitive UX.",
-    },
-    {
-      completed: true,
-      text: "Developed RESTful APIs in Perl, Go, and TypeScript to enable seamless frontend-backend communication.",
-    },
-    {
-      completed: false,
-      text: "Led code reviews and contributed to Agile ceremonies, enhancing team velocity and code quality.",
-    },
-    {
-      completed: false,
-      text: "Participated in retrospectives that improved internal workflow and reduced deployment time.",
-    },
-  ];
 
   return (
     <div
@@ -66,18 +33,18 @@ export default function Work() {
             {/* Desktop: Single row layout */}
             <div className="hidden md:flex md:items-center gap-4">
               <h3 className="text-3xl font-heading font-bold text-cyber-cyan">
-                Software Engineer
+                {currentJob.title}
               </h3>
               <span className="text-cyber-pink text-2xl">@</span>
               <Link
-                href="https://www.haleymarketing.com"
+                href={currentJob.companyUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group text-3xl font-heading font-bold text-cyber-text hover:text-cyber-lime transition-all duration-300"
-                aria-label="Haley Marketing (opens in new tab)"
+                aria-label={`${currentJob.company} (opens in new tab)`}
               >
                 <span className="relative">
-                  Haley Marketing
+                  {currentJob.company}
                   <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-cyber-cyan to-cyber-pink group-hover:w-full transition-all duration-300" />
                 </span>
               </Link>
@@ -85,19 +52,19 @@ export default function Work() {
             {/* Mobile: Stacked with @ inline with company */}
             <div className="flex flex-col gap-1 md:hidden">
               <h3 className="text-2xl font-heading font-bold text-cyber-cyan">
-                Software Engineer
+                {currentJob.title}
               </h3>
               <div className="flex items-center gap-2">
                 <span className="text-cyber-pink text-xl">@</span>
                 <Link
-                  href="https://www.haleymarketing.com"
+                  href={currentJob.companyUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group text-2xl font-heading font-bold text-cyber-text hover:text-cyber-lime transition-all duration-300"
-                  aria-label="Haley Marketing (opens in new tab)"
+                  aria-label={`${currentJob.company} (opens in new tab)`}
                 >
                   <span className="relative">
-                    Haley Marketing
+                    {currentJob.company}
                     <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-cyber-cyan to-cyber-pink group-hover:w-full transition-all duration-300" />
                   </span>
                 </Link>

@@ -59,7 +59,7 @@ const nextConfig = {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-eval' 'unsafe-inline'", // Required for Next.js
+              "script-src 'self' 'unsafe-inline'", // unsafe-inline needed for Next.js inline scripts
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
               "font-src 'self' https://fonts.gstatic.com data:",
               "img-src 'self' data: https: blob:",
@@ -81,7 +81,7 @@ const nextConfig = {
   // Image optimization - security & performance
   images: {
     formats: ['image/avif', 'image/webp'],
-    qualities: [75, 100], // Add quality 100 for /me-square.jpg
+    qualities: [75, 85, 90], // Optimized quality settings
     remotePatterns: [
       {
         protocol: 'https',

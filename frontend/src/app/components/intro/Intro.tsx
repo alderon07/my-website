@@ -74,7 +74,7 @@ export default function Intro() {
                     className="rounded-3xl object-cover w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 relative z-10 bg-cyber-black"
                     src="/me-square.jpg"
                     alt="Portrait of Naqi, software developer"
-                    quality={100}
+                    quality={85}
                     width={300}
                     height={300}
                     priority
@@ -98,14 +98,15 @@ export default function Intro() {
           </div>
 
           {/* Scroll indicator */}
-          <div className="mt-8 animate-float">
+          <div className="mt-8 animate-float" aria-hidden="true">
             <div className="flex flex-col items-center gap-2 text-cyber-text/50">
               <span className="text-xs uppercase tracking-widest">Scroll</span>
-              <svg 
-                className="w-6 h-6 animate-bounce text-cyber-cyan" 
-                fill="none" 
-                stroke="currentColor" 
+              <svg
+                className="w-6 h-6 animate-bounce text-cyber-cyan"
+                fill="none"
+                stroke="currentColor"
                 viewBox="0 0 24 24"
+                aria-hidden="true"
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
               </svg>

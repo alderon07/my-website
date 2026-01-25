@@ -150,7 +150,7 @@ export default function PhotographyPage() {
               fill
               className="object-contain"
               sizes="90vw"
-              quality={100}
+              quality={90}
             />
           </div>
           {selectedPhoto.title && (

@@ -1,12 +1,15 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import Navbar from "./components/navbar/Navbar";
 import Intro from "./components/intro/Intro";
-import About from "./components/about/About";
-import Skills from "./components/skills/Skills";
-import Work from "./components/work/Work";
-import Projects from "./components/projects/Projects";
 import Footer from "./components/footer/Footer";
 import { getSiteUrl } from "./site";
+
+// Dynamic imports for below-fold sections to reduce initial bundle size
+const About = dynamic(() => import("./components/about/About"));
+const Skills = dynamic(() => import("./components/skills/Skills"));
+const Work = dynamic(() => import("./components/work/Work"));
+const Projects = dynamic(() => import("./components/projects/Projects"));
 
 export default function Home() {
   const siteUrl = getSiteUrl();

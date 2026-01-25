@@ -207,7 +207,7 @@ export default function LinksContentClient() {
             <p className={linksTheme.subtitle}>{linksProfile.subtitle}</p>
           </div>
 
-          <div className={linksTheme.quickLinksRow} aria-label="Quick links">
+          <nav className={linksTheme.quickLinksRow} aria-label="Quick links">
             {linksProfile.quickLinks.map((quickLink) => {
               const Icon = quickLink.icon;
               const isExternal =
@@ -245,10 +245,10 @@ export default function LinksContentClient() {
                 </Link>
               );
             })}
-          </div>
+          </nav>
         </div>
 
-        <div className={linksTheme.linksList} aria-label="Links list">
+        <nav className={linksTheme.linksList} aria-label="Links list">
           {links.map((item) => {
             const Icon = item.icon;
             const isExternal = item.external ?? item.href.startsWith("http");
@@ -321,7 +321,7 @@ export default function LinksContentClient() {
               </Link>
             );
           })}
-        </div>
+        </nav>
 
         {/* <div className={linksTheme.spotifyWrap} aria-label="Spotify now playing">
           <div className={linksTheme.spotifyTitleRow}>

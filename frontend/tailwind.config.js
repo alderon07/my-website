@@ -7,6 +7,19 @@ module.exports = {
     "./src/app/**/*.{ts,tsx,js,jsx}",
     "./src/components/**/*.{ts,tsx,js,jsx}",
   ],
+  // Safelist dynamic classes used in Skills component
+  safelist: [
+    "text-cyber-cyan",
+    "text-cyber-pink",
+    "text-cyber-lime",
+    "from-cyber-cyan",
+    "from-cyber-pink",
+    "from-cyber-lime",
+    "to-cyber-cyan/50",
+    "to-cyber-pink/50",
+    "to-cyber-lime/50",
+    "bg-gradient-to-r",
+  ],
   theme: {
     extend: {
       colors: {
