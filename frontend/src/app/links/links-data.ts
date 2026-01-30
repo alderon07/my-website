@@ -130,6 +130,18 @@ export const links: LinksItem[] = [
       "bg-violet-500/15 ring-1 ring-violet-400/20 text-violet-200",
   },
   {
+    key: "cosmic-index",
+    label: "cosmic index",
+    subtitle: "cosmic object encyclopedia",
+    href: "https://cosmic-index.vercel.app/",
+    icon: GlobeAltIcon,
+    external: true,
+    accentClassName:
+      "hover:ring-cyan-400/25 hover:border-cyan-400/25 dark:hover:ring-cyan-300/20 dark:hover:border-cyan-300/20",
+    iconWrapClassName:
+      "bg-cyan-500/15 ring-1 ring-cyan-400/20 text-cyan-200",
+  },
+  {
     key: "photography",
     label: "photography",
     subtitle: "some favorite shots",
