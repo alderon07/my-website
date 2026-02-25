@@ -68,6 +68,11 @@ export const skills: Skill[] = [
     category: "Backend",
     iconUrl: "/icons/skills/perl-colored.svg",
   },
+  {
+    name: "Ruby on Rails",
+    category: "Backend",
+    iconUrl: "https://cdn.simpleicons.org/rubyonrails/CC0000",
+  },
   // Database
   {
     name: "PostgreSQL",
@@ -101,9 +106,19 @@ export const skills: Skill[] = [
     iconUrl: "/icons/skills/googlecloud-colored.svg",
   },
   {
+    name: "DigitalOcean",
+    category: "Tools & Cloud",
+    iconUrl: "https://cdn.simpleicons.org/digitalocean/0080FF",
+  },
+  {
+    name: "Hatchbox",
+    category: "Tools & Cloud",
+    iconUrl: "https://hatchbox.io/apple-touch-icon.png",
+  },
+  {
     name: "Jira",
     category: "Tools & Cloud",
-    iconUrl: "/jira.svg",
+    iconUrl: "https://cdn.simpleicons.org/jira/0052CC",
   },
   {
     name: "Cursor",
@@ -113,7 +128,7 @@ export const skills: Skill[] = [
   {
     name: "Claude Code",
     category: "Tools & Cloud",
-    iconUrl: "/claude-code.png",
+    iconUrl: "https://cdn.simpleicons.org/claude/DA7756",
   },
 ];
 

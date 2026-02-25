@@ -93,6 +93,14 @@ const nextConfig = {
         hostname: 'www.anthropic.com',
         pathname: '/_next/image/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'cdn.simpleicons.org',
+      },
+      {
+        protocol: 'https',
+        hostname: 'hatchbox.io',
+      },
     ],
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",

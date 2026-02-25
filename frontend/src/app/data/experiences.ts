@@ -6,6 +6,10 @@ export interface Experience {
 export const experiences: Experience[] = [
   {
     completed: true,
+    text: "Led development of a full-stack data intelligence platform (Ruby on Rails + React) that unified data from 7+ business systems into a single reporting layer, delivering real-time dashboards, normalized analytics, and a cache-optimized API; deployed via Hatchbox on DigitalOcean.",
+  },
+  {
+    completed: true,
     text: "Engineered backend integrations for ATS platforms and third-party services (e.g., Indeed, ZipRecruiter, Bullhorn), supporting 20+ systems, 1M+ job listings and candidates.",
   },
   {
