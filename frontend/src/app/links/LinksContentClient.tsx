@@ -323,37 +323,29 @@ export default function LinksContentClient() {
           })}
         </nav>
 
-        <div className={linksTheme.spotifyWrap} aria-label="Spotify now playing">
-          <div className={linksTheme.spotifyTitleRow}>
-            <span className={linksTheme.spotifyTitle}>{spotifyNowPlaying.title}</span>
-            <Link
-              href={spotifyNowPlaying.openUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={linksTheme.spotifyOpenLink}
-              onClick={() => {
-                posthog?.capture("link_clicked", {
-                  link_key: "spotify_profile",
-                  link_label: "Open Spotify",
-                  link_href: spotifyNowPlaying.openUrl,
-                  is_external: true,
-                  link_type: "spotify",
-                });
-              }}
-            >
-              open
-            </Link>
-          </div>
-
-          {nowPlaying.status === "loading" ? (
-            <div className="h-[72px] rounded-xl bg-white/5" />
-          ) : nowPlaying.status === "not_configured" ? (
-            <div className="text-xs text-slate-300/70">
-              spotify now-playing isn’t configured yet.
+        {nowPlaying.status === "playing" ? (
+          <div className={linksTheme.spotifyWrap} aria-label="Spotify now playing">
+            <div className={linksTheme.spotifyTitleRow}>
+              <span className={linksTheme.spotifyTitle}>{spotifyNowPlaying.title}</span>
+              <Link
+                href={spotifyNowPlaying.openUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={linksTheme.spotifyOpenLink}
+                onClick={() => {
+                  posthog?.capture("link_clicked", {
+                    link_key: "spotify_profile",
+                    link_label: "Open Spotify",
+                    link_href: spotifyNowPlaying.openUrl,
+                    is_external: true,
+                    link_type: "spotify",
+                  });
+                }}
+              >
+                open
+              </Link>
             </div>
-          ) : nowPlaying.status === "not_playing" ? (
-            <div className="text-xs text-slate-300/70">not playing right now.</div>
-          ) : (
+
             <Link
               href={nowPlaying.songUrl}
               target="_blank"
@@ -392,8 +384,8 @@ export default function LinksContentClient() {
                 </div>
               </div>
             </Link>
-          )}
-        </div>
+          </div>
+        ) : null}
 
         <div className={linksTheme.footer}>
           <Link href="/" target="_blank" rel="noopener noreferrer" className={linksTheme.footerLink}>
