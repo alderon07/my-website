@@ -323,7 +323,7 @@ export default function LinksContentClient() {
           })}
         </nav>
 
-        {/* <div className={linksTheme.spotifyWrap} aria-label="Spotify now playing">
+        <div className={linksTheme.spotifyWrap} aria-label="Spotify now playing">
           <div className={linksTheme.spotifyTitleRow}>
             <span className={linksTheme.spotifyTitle}>{spotifyNowPlaying.title}</span>
             <Link
@@ -373,6 +373,7 @@ export default function LinksContentClient() {
               <div className="h-12 w-12 overflow-hidden rounded-lg bg-white/10 ring-1 ring-white/10">
                 {nowPlaying.albumImageUrl ? (
                   // Using <img> avoids extra next/image remote host config.
+                  // eslint-disable-next-line @next/next/no-img-element
                   <img
                     src={nowPlaying.albumImageUrl}
                     alt={`${nowPlaying.album} album art`}
@@ -392,7 +393,7 @@ export default function LinksContentClient() {
               </div>
             </Link>
           )}
-        </div> */}
+        </div>
 
         <div className={linksTheme.footer}>
           <Link href="/" target="_blank" rel="noopener noreferrer" className={linksTheme.footerLink}>
@@ -409,4 +410,3 @@ export default function LinksContentClient() {
     </div>
   );
 }
-
