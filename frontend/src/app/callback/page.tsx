@@ -1,12 +1,20 @@
 "use client";
 
-import React, { useCallback, useState } from "react";
+import React, { Suspense, useCallback, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 
 const REDIRECT_URI = "https://naqihaider.vercel.app/callback";
 
 export default function CallbackPage() {
+  return (
+    <Suspense fallback={<CallbackFallback />}>
+      <CallbackContent />
+    </Suspense>
+  );
+}
+
+function CallbackContent() {
   const searchParams = useSearchParams();
   const code = searchParams.get("code");
   const error = searchParams.get("error");
@@ -71,6 +79,21 @@ export default function CallbackPage() {
             Back to links page
           </Link>
         </div>
+      </section>
+    </main>
+  );
+}
+
+function CallbackFallback() {
+  return (
+    <main className="min-h-screen bg-cyber-black text-cyber-text flex items-center justify-center px-4">
+      <section className="w-full max-w-2xl rounded-2xl border border-cyber-cyan/20 bg-[#111827]/70 p-6 sm:p-8">
+        <h1 className="text-2xl sm:text-3xl font-bold text-cyber-cyan">
+          Spotify Callback
+        </h1>
+        <p className="mt-4 text-sm sm:text-base text-cyber-text/80">
+          Loading callback details...
+        </p>
       </section>
     </main>
   );
