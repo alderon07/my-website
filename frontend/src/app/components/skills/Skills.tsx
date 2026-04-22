@@ -63,43 +63,49 @@ export default function Skills() {
                 className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-4 list-none"
                 role="list"
               >
-                {category.skills.map((skill, skillIndex) => (
-                  <li
-                    key={skill.name}
-                    className="group flex flex-col items-center gap-2 p-4 rounded-xl bg-cyber-surface/50 border border-cyber-cyan/10 hover:border-cyber-cyan/50 transition-all duration-300 hover:scale-110 card-lift cursor-default animate-scale-in"
-                    style={{ animationDelay: `${(categoryIndex * 0.15) + (skillIndex * 0.05)}s` }}
-                  >
-                    <div
-                      className="w-12 h-12 md:w-14 md:h-14 relative transition-all duration-300 group-hover:drop-shadow-[0_0_15px_rgba(0,240,255,0.6)]"
-                      aria-hidden="true"
+                {category.skills.map((skill, skillIndex) => {
+                  const SkillIcon = skill.icon;
+
+                  return (
+                    <li
+                      key={skill.name}
+                      className="group flex flex-col items-center gap-2 p-4 rounded-xl bg-cyber-surface/50 border border-cyber-cyan/10 hover:border-cyber-cyan/50 transition-all duration-300 hover:scale-110 card-lift cursor-default animate-scale-in"
+                      style={{ animationDelay: `${(categoryIndex * 0.15) + (skillIndex * 0.05)}s` }}
                     >
-                      {skill.iconUrl.startsWith("http") ? (
-                        // External SVG icon CDNs can fail through next/image optimization in production.
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img
-                          src={skill.iconUrl}
-                          alt=""
-                          width={64}
-                          height={64}
-                          className="w-full h-full object-contain"
-                          loading="lazy"
-                          referrerPolicy="no-referrer"
-                        />
-                      ) : (
-                        <Image
-                          src={skill.iconUrl}
-                          alt=""
-                          width={64}
-                          height={64}
-                          className="w-full h-full object-contain"
-                        />
-                      )}
-                    </div>
-                    <span className="text-xs md:text-sm font-mono text-center text-cyber-text/80 group-hover:text-cyber-cyan transition-all duration-300">
-                      {skill.name}
-                    </span>
-                  </li>
-                ))}
+                      <div
+                        className="w-12 h-12 md:w-14 md:h-14 relative transition-all duration-300 group-hover:drop-shadow-[0_0_15px_rgba(0,240,255,0.6)]"
+                        aria-hidden="true"
+                      >
+                        {SkillIcon ? (
+                          <SkillIcon className="w-full h-full object-contain" />
+                        ) : skill.iconUrl?.startsWith("http") ? (
+                          // External SVG icon CDNs can fail through next/image optimization in production.
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img
+                            src={skill.iconUrl}
+                            alt=""
+                            width={64}
+                            height={64}
+                            className="w-full h-full object-contain"
+                            loading="lazy"
+                            referrerPolicy="no-referrer"
+                          />
+                        ) : skill.iconUrl ? (
+                          <Image
+                            src={skill.iconUrl}
+                            alt=""
+                            width={64}
+                            height={64}
+                            className="w-full h-full object-contain"
+                          />
+                        ) : null}
+                      </div>
+                      <span className="text-xs md:text-sm font-mono text-center text-cyber-text/80 group-hover:text-cyber-cyan transition-all duration-300">
+                        {skill.name}
+                      </span>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}

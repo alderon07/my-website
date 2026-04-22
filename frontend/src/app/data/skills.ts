@@ -1,7 +1,33 @@
+import type { ComponentType, SVGProps } from "react";
+import {
+  ClaudeAI,
+  CSSNew,
+  CursorLight,
+  DigitalOcean,
+  Docker,
+  Git,
+  GoLight,
+  GoogleCloud,
+  HTML5,
+  JQueryLight,
+  JavaScript,
+  MongoDBLight,
+  MySQLLight,
+  Nextjs,
+  Nodejs,
+  PostgreSQL,
+  ReactLight,
+  TailwindCSS,
+  TypeScript,
+} from "@ridemountainpig/svgl-react";
+
+export type SkillIcon = ComponentType<SVGProps<SVGSVGElement>>;
+
 export interface Skill {
   name: string;
   category: "Frontend" | "Backend" | "Database" | "Tools & Cloud";
-  iconUrl: string;
+  icon?: SkillIcon;
+  iconUrl?: string;
 }
 
 export interface SkillCategory {
@@ -15,53 +41,53 @@ export const skills: Skill[] = [
   {
     name: "JavaScript",
     category: "Frontend",
-    iconUrl: "/icons/skills/javascript-colored.svg",
+    icon: JavaScript,
   },
   {
     name: "TypeScript",
     category: "Frontend",
-    iconUrl: "/icons/skills/typescript-colored.svg",
+    icon: TypeScript,
   },
   {
     name: "React",
     category: "Frontend",
-    iconUrl: "/icons/skills/react-colored.svg",
+    icon: ReactLight,
   },
   {
     name: "Next.js",
     category: "Frontend",
-    iconUrl: "/icons/skills/nextjs-colored.svg",
+    icon: Nextjs,
   },
   {
     name: "HTML5",
     category: "Frontend",
-    iconUrl: "/icons/skills/html5-colored.svg",
+    icon: HTML5,
   },
   {
     name: "CSS3",
     category: "Frontend",
-    iconUrl: "/icons/skills/css3-colored.svg",
+    icon: CSSNew,
   },
   {
     name: "Tailwind CSS",
     category: "Frontend",
-    iconUrl: "/icons/skills/tailwindcss-colored.svg",
+    icon: TailwindCSS,
   },
   {
     name: "jQuery",
     category: "Frontend",
-    iconUrl: "/icons/skills/jquery-colored.svg",
+    icon: JQueryLight,
   },
   // Backend
   {
     name: "Node.js",
     category: "Backend",
-    iconUrl: "/icons/skills/nodejs-colored.svg",
+    icon: Nodejs,
   },
   {
     name: "Go",
     category: "Backend",
-    iconUrl: "/icons/skills/go-colored.svg",
+    icon: GoLight,
   },
   {
     name: "Perl",
@@ -77,38 +103,38 @@ export const skills: Skill[] = [
   {
     name: "PostgreSQL",
     category: "Database",
-    iconUrl: "/icons/skills/postgresql-colored.svg",
+    icon: PostgreSQL,
   },
   {
     name: "MongoDB",
     category: "Database",
-    iconUrl: "/icons/skills/mongodb-colored.svg",
+    icon: MongoDBLight,
   },
   {
     name: "MySQL",
     category: "Database",
-    iconUrl: "/icons/skills/mysql-colored.svg",
+    icon: MySQLLight,
   },
   // Tools & Cloud
   {
     name: "Docker",
     category: "Tools & Cloud",
-    iconUrl: "/icons/skills/docker-colored.svg",
+    icon: Docker,
   },
   {
     name: "Git",
     category: "Tools & Cloud",
-    iconUrl: "/icons/skills/git-colored.svg",
+    icon: Git,
   },
   {
     name: "GCP",
     category: "Tools & Cloud",
-    iconUrl: "/icons/skills/googlecloud-colored.svg",
+    icon: GoogleCloud,
   },
   {
     name: "DigitalOcean",
     category: "Tools & Cloud",
-    iconUrl: "https://cdn.simpleicons.org/digitalocean/0080FF",
+    icon: DigitalOcean,
   },
   {
     name: "Hatchbox",
@@ -123,12 +149,12 @@ export const skills: Skill[] = [
   {
     name: "Cursor",
     category: "Tools & Cloud",
-    iconUrl: "/cursor.png",
+    icon: CursorLight,
   },
   {
     name: "Claude Code",
     category: "Tools & Cloud",
-    iconUrl: "https://cdn.simpleicons.org/claude/DA7756",
+    icon: ClaudeAI,
   },
 ];
 
