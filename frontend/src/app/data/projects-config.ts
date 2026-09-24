@@ -1,18 +1,19 @@
 export const priorityRepos = [
-  "my-website",
   "cosmic-index",
-  "link-it",
-  "godoit",
   "kv",
-  "cocktail-app", 
+  "al",
+  "godoit",
+  "log",
 ];
 
 export const projectTechStack: Record<string, string[]> = {
   "my-website": ["React", "TypeScript", "Next.js", "Tailwind-CSS"],
-  "cosmic-index": ["React", "TypeScript", "Next.js", "Tailwind-CSS","Upstash"],
+  "cosmic-index": ["React", "TypeScript", "Next.js", "Tailwind-CSS", "Upstash"],
   "link-it": ["TypeScript", "Next.js", "Tailwind-CSS", "React"],
+  al: ["Go", "Bubble Tea", "Bash"],
   godoit: ["Go"],
   kv: ["Go"],
+  log: ["Go"],
   "cocktail-app": ["React", "TypeScript", "Tailwind-CSS"],
 };
 
