@@ -12,6 +12,19 @@
   }
 }
 
+@layer components {
+  /* Nabla's COLRv1 glyphs render as boxes in Safari. Use a readable default. */
+  .links-profile-name {
+    @apply font-heading text-yellow-400;
+  }
+
+  @supports font-tech(color-COLRv1) {
+    .links-profile-name {
+      @apply font-nabla;
+    }
+  }
+}
+
 /* Cyberpunk scrollbar styles */
 ::-webkit-scrollbar {
   width: 8px;

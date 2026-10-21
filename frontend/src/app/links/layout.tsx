@@ -11,8 +11,7 @@ export default function LinksLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // Apply a more distinctive font to the links page only.
-  // Your Nabla name mark still uses `font-nabla` on the h1 and will override this.
+  // The name heading selects its own font based on COLRv1 support.
   return <div className={spaceGrotesk.className}>{children}</div>;
 }
 

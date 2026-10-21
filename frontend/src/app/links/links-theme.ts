@@ -86,7 +86,7 @@ const baseLinksTheme = {
     "relative h-24 w-24 overflow-hidden ring-2 ring-emerald-900/10 dark:ring-slate-700/60 shadow-lg",
   avatarImg: "object-cover",
   profileText: "mt-4",
-  name: "font-nabla text-3xl leading-none",
+  name: "links-profile-name text-3xl leading-none",
   subtitle: "mt-2 text-sm text-emerald-950/80 dark:text-slate-300/80",
 
   quickLinksRow: "mt-4 flex items-center gap-3",
