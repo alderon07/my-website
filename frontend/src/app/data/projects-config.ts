@@ -6,9 +6,13 @@ export const priorityRepos = [
   "log",
 ];
 
+export const projectHomepages: Partial<Record<string, string>> = {
+  "cosmic-index": "https://cosmicindex.dev",
+};
+
 export const projectTechStack: Record<string, string[]> = {
   "my-website": ["React", "TypeScript", "Next.js", "Tailwind-CSS"],
-  "cosmic-index": ["React", "TypeScript", "Next.js", "Tailwind-CSS", "Upstash"],
+  "cosmic-index": ["React", "TypeScript", "Next.js", "Tailwind-CSS", "Upstash", "Turso"],
   "link-it": ["TypeScript", "Next.js", "Tailwind-CSS", "React"],
   al: ["Go", "Bubble Tea", "Bash"],
   godoit: ["Go"],

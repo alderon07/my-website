@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import {
   priorityRepos,
+  projectHomepages,
   projectTechStack,
   languageColors,
   githubUsername,
@@ -50,7 +51,12 @@ export default function Projects() {
           return aIndex - bIndex;
         });
 
-        setRepos(sorted);
+        setRepos(
+          sorted.map((repo) => ({
+            ...repo,
+            homepage: projectHomepages[repo.name] ?? repo.homepage,
+          }))
+        );
       } catch (error) {
         console.error(
           "Error fetching repos:",

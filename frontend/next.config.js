@@ -22,6 +22,7 @@ const nextConfig = {
   
   // Security Headers
   async headers() {
+    const isDevelopment = process.env.NODE_ENV === 'development'
     return [
       {
         // Apply these headers to all routes
@@ -59,7 +60,7 @@ const nextConfig = {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline'", // unsafe-inline needed for Next.js inline scripts
+              `script-src 'self' 'unsafe-inline'${isDevelopment ? " 'unsafe-eval'" : ""}`,
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
               "font-src 'self' https://fonts.gstatic.com data:",
               "img-src 'self' data: https: blob:",

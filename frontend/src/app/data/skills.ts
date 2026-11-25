@@ -11,12 +11,15 @@ import {
   HTML5,
   JQueryLight,
   JavaScript,
+  Linux,
   MongoDBLight,
   MySQLLight,
   Nextjs,
   Nodejs,
   PostgreSQL,
   ReactLight,
+  Redis,
+  Sentry,
   TailwindCSS,
   TypeScript,
 } from "@ridemountainpig/svgl-react";
@@ -122,9 +125,24 @@ export const skills: Skill[] = [
     icon: Docker,
   },
   {
+    name: "Linux",
+    category: "Tools & Cloud",
+    icon: Linux,
+  },
+  {
+    name: "Redis",
+    category: "Tools & Cloud",
+    icon: Redis,
+  },
+  {
     name: "Git",
     category: "Tools & Cloud",
     icon: Git,
+  },
+  {
+    name: "Bitbucket",
+    category: "Tools & Cloud",
+    iconUrl: "https://cdn.simpleicons.org/bitbucket/0052CC",
   },
   {
     name: "GCP",
@@ -140,6 +158,11 @@ export const skills: Skill[] = [
     name: "Hatchbox",
     category: "Tools & Cloud",
     iconUrl: "https://hatchbox.io/apple-touch-icon.png",
+  },
+  {
+    name: "Sentry",
+    category: "Tools & Cloud",
+    icon: Sentry,
   },
   {
     name: "Jira",
